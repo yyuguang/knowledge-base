@@ -1,0 +1,23 @@
+{
+  "id": "conv-1777297144084-nllce1zyh",
+  "providerId": "claude",
+  "title": "Read system rules from TheSchema.md",
+  "titleGenerationStatus": "success",
+  "createdAt": 1777297144087,
+  "updatedAt": 1777336627818,
+  "lastResponseAt": 1777336627818,
+  "sessionId": "df75749f-33dc-4184-ae29-05515f4ecdeb",
+  "providerState": {
+    "providerSessionId": "df75749f-33dc-4184-ae29-05515f4ecdeb"
+  },
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 2120,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 44544,
+    "contextWindow": 200000,
+    "contextTokens": 46664,
+    "percentage": 23,
+    "contextWindowIsAuthoritative": true
+  }
+}

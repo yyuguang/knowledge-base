@@ -1,0 +1,235 @@
+{
+  "main": {
+    "id": "08258404ab578219",
+    "type": "split",
+    "children": [
+      {
+        "id": "a650f3bd97796287",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "af431a7fc980fc6c",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Attachments/Pasted image 20260427213729.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20260427213729"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "faff793c119b8233",
+    "type": "split",
+    "children": [
+      {
+        "id": "a3a683db792e5165",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9db822706bc5a770",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "0cd87f6a0300d478",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "4c193d1c88d9505d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "af72acdfa1dece29",
+    "type": "split",
+    "children": [
+      {
+        "id": "c4ca371653134c01",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "252174182a867631",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向链接"
+            }
+          },
+          {
+            "id": "72da5a651df64dfe",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "1881916cf56f8b86",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "73467146b22cd10f",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "1cf7eeaba681936a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          },
+          {
+            "id": "b986a32dcae4b74e",
+            "type": "leaf",
+            "state": {
+              "type": "claudian-view",
+              "state": {},
+              "icon": "bot",
+              "title": "Claudian"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "claudian:Open Claudian": false
+    }
+  },
+  "active": "9db822706bc5a770",
+  "lastOpenFiles": [
+    "Attachments/Pasted image 20260427213710.png",
+    "Attachments/Pasted image 20260427213646.png",
+    "CLAUDE.md",
+    "TheSchema.md",
+    "wiki/index.md",
+    "wiki/concepts/概念_垃圾收集器.md",
+    "wiki/overview/java",
+    "wiki/comparisons/java",
+    "wiki/entities/java/项目_HotSpot_VM.md",
+    "wiki/entities/java/人物_周志明.md",
+    "wiki/entities/java",
+    "wiki/concepts/java/概念_类加载机制.md",
+    "wiki/concepts/java/概念_字节码执行引擎.md",
+    "wiki/concepts/java/概念_垃圾收集算法.md",
+    "wiki/concepts/java/概念_垃圾收集器.md",
+    "wiki/concepts/java/概念_Java语法糖.md",
+    "wiki/concepts/java/概念_JVM内存区域.md",
+    "wiki/concepts/java/概念_Java线程安全与锁优化.md",
+    "wiki/concepts/java/概念_Java内存模型JMM.md",
+    "wiki/concepts/java/概念_JIT编译优化技术.md",
+    "wiki/concepts/java/概念_Class文件结构.md",
+    "wiki/concepts/java",
+    "wiki/sources/java/深入理解Java虚拟机.md",
+    "wiki/sources/java",
+    "wiki/log.md",
+    "prompt/prompt_rules_auto.md",
+    "wiki/concepts/概念_JVM内存区域.md",
+    "wiki/entities/项目_HotSpot_VM.md",
+    "wiki/entities/人物_周志明.md",
+    "wiki/concepts/概念_垃圾收集算法.md",
+    "wiki/concepts/概念_Java线程安全与锁优化.md",
+    "wiki/concepts/概念_Java语法糖.md",
+    "raw/books/深入理解Java虚拟机：JVM高级特性与最佳实践（第3版）周志明.pdf",
+    "prompt",
+    "Attachments/Pasted image 20260427213729.png",
+    "wiki/overview",
+    "wiki/comparisons",
+    "wiki/concepts",
+    "Attachments/Pasted image 20260427210748.png"
+  ]
+}
