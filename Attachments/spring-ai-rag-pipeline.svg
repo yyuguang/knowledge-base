@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500">
+  <style>.title{font:700 28px Arial;fill:#1f2937}.box{rx:14;stroke-width:2.5}.h{font:700 16px Arial;fill:#111827}.t{font:14px Arial;fill:#374151}.arrow{stroke:#64748b;stroke-width:2.2;fill:none;marker-end:url(#arrow)}</style>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#64748b"/></marker></defs>
+  <rect width="1200" height="500" fill="#fff"/>
+  <text x="600" y="45" text-anchor="middle" class="title">RetrievalAugmentationAdvisor Modular RAG 源码流程</text>
+  <rect x="35" y="90" width="240" height="82" class="box" fill="#d0ebff" stroke="#1971c2"/><text x="155" y="122" text-anchor="middle" class="h">0. originalQuery</text><text x="155" y="150" text-anchor="middle" class="t">user text + history + context</text>
+  <rect x="330" y="90" width="240" height="82" class="box" fill="#e7f5ff" stroke="#1971c2"/><text x="450" y="122" text-anchor="middle" class="h">1. QueryTransformer 链</text><text x="450" y="150" text-anchor="middle" class="t">顺序 apply</text>
+  <rect x="625" y="90" width="240" height="82" class="box" fill="#d0ebff" stroke="#1971c2"/><text x="745" y="122" text-anchor="middle" class="h">2. QueryExpander</text><text x="745" y="150" text-anchor="middle" class="t">一问变多问</text>
+  <rect x="920" y="90" width="250" height="82" class="box" fill="#fff3bf" stroke="#e67700"/><text x="1045" y="118" text-anchor="middle" class="h">3. 并发 retrieve</text><text x="1045" y="144" text-anchor="middle" class="t">CompletableFuture + TaskExecutor</text><text x="1045" y="164" text-anchor="middle" class="t">默认 4/16 ai-advisor-*</text>
+  <rect x="165" y="295" width="260" height="86" class="box" fill="#ebfbee" stroke="#2f9e44"/><text x="295" y="326" text-anchor="middle" class="h">4. DocumentJoiner</text><text x="295" y="352" text-anchor="middle" class="t">默认 ConcatenationDocumentJoiner</text><text x="295" y="372" text-anchor="middle" class="t">合并多查询结果</text>
+  <rect x="470" y="295" width="260" height="86" class="box" fill="#ebfbee" stroke="#2f9e44"/><text x="600" y="326" text-anchor="middle" class="h">5. DocumentPostProcessor</text><text x="600" y="352" text-anchor="middle" class="t">重排 / 压缩 / 过滤</text><text x="600" y="372" text-anchor="middle" class="t">写入 rag_document_context</text>
+  <rect x="775" y="295" width="260" height="86" class="box" fill="#ffe3e3" stroke="#c92a2a"/><text x="905" y="326" text-anchor="middle" class="h">6-7. QueryAugmenter</text><text x="905" y="352" text-anchor="middle" class="t">augmentUserMessage</text><text x="905" y="372" text-anchor="middle" class="t">after() 回填 metadata</text>
+  <path d="M275 131 H330" class="arrow"/><path d="M570 131 H625" class="arrow"/><path d="M865 131 H920" class="arrow"/><path d="M1045 172 C970 255 575 270 295 295" class="arrow"/><path d="M425 338 H470" class="arrow"/><path d="M730 338 H775" class="arrow"/>
+</svg>

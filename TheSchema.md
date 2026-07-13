@@ -42,7 +42,7 @@ tags:
 | `wiki/comparisons/` | 比较分析页        |
 | `wiki/overview/`    | 总览、综合页       |
 
-> **领域子目录**：上述目录可按领域划分子目录组织，例如 `wiki/concepts/java/`、`wiki/concepts/redis/`、`wiki/concepts/mq/`。每种领域目录遵循相同的页面类型规范。所有 `index.md` 中的索引条目也对应使用子目录路径。
+> **领域子目录**：上述目录可按 <area>/<sub-area> 多层组织，例如 `wiki/concepts/java/jvm/`、`wiki/concepts/java/concurrency/`、`wiki/concepts/redis/`。每种领域目录遵循相同的页面类型规范。所有索引条目也对应使用子目录路径。
 
 ### 根目录文件
 - `wiki/index.md`：内容索引（可选，用 Obsidian 视图替代也行）

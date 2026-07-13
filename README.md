@@ -9,13 +9,13 @@
 │
 ├── wiki/                   # 知识层（LLM 维护）
 │   ├── sources/           # 来源摘要页
-│   │   └── java/         # 按领域划分子目录
+│   │   └── java/jvm/    # 按领域/子领域组织
 │   ├── entities/          # 实体页（人物、项目等）
-│   │   └── java/
+│   │   └── java/jvm/
 │   ├── concepts/          # 概念页（方法、理论等）
-│   │   └── java/
+│   │   └── java/jvm/
 │   ├── comparisons/       # 比较分析页
-│   │   └── java/         # 等新增领域（redis/、mq/…）
+│   │   └── java/         # 待新增（redis/、mq/…）
 │   ├── overview/          # 总览综合页
 │   ├── index.md           # 内容索引
 │   └── log.md             # 操作日志

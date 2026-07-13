@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680">
+  <style>
+    .title{font:700 30px Arial,sans-serif;fill:#1f2937}
+    .box{rx:14;stroke-width:2.5}
+    .h{font:700 18px Arial,sans-serif;fill:#111827}
+    .t{font:14px Arial,sans-serif;fill:#374151}
+    .arrow{stroke:#64748b;stroke-width:2.2;fill:none;marker-end:url(#arrow)}
+  </style>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#64748b"/></marker></defs>
+  <rect width="1200" height="680" fill="#fff"/>
+  <text x="600" y="45" text-anchor="middle" class="title">Spring AI 源码分层架构</text>
+  <rect x="420" y="80" width="360" height="76" class="box" fill="#ebfbee" stroke="#2f9e44"/>
+  <text x="600" y="112" text-anchor="middle" class="h">业务应用</text>
+  <text x="600" y="136" text-anchor="middle" class="t">注入 ChatClient.Builder / ChatModel / VectorStore</text>
+  <rect x="70" y="220" width="270" height="100" class="box" fill="#d0ebff" stroke="#1971c2"/>
+  <text x="205" y="254" text-anchor="middle" class="h">spring-ai-client-chat</text>
+  <text x="205" y="280" text-anchor="middle" class="t">ChatClient / RequestSpec</text>
+  <text x="205" y="303" text-anchor="middle" class="t">AdvisorChain / Observations</text>
+  <rect x="465" y="220" width="270" height="100" class="box" fill="#fff3bf" stroke="#e67700"/>
+  <text x="600" y="254" text-anchor="middle" class="h">spring-ai-rag</text>
+  <text x="600" y="280" text-anchor="middle" class="t">RetrievalAugmentationAdvisor</text>
+  <text x="600" y="303" text-anchor="middle" class="t">QueryTransformer / Retriever</text>
+  <rect x="860" y="220" width="270" height="100" class="box" fill="#f3d9fa" stroke="#9c36b5"/>
+  <text x="995" y="254" text-anchor="middle" class="h">mcp/</text>
+  <text x="995" y="280" text-anchor="middle" class="t">McpToolUtils</text>
+  <text x="995" y="303" text-anchor="middle" class="t">Client/Server Tool Bridge</text>
+  <rect x="70" y="400" width="270" height="110" class="box" fill="#e7f5ff" stroke="#364fc7"/>
+  <text x="205" y="435" text-anchor="middle" class="h">spring-ai-model</text>
+  <text x="205" y="462" text-anchor="middle" class="t">ChatModel / Prompt / Messages</text>
+  <text x="205" y="486" text-anchor="middle" class="t">ToolCallingManager / Converter</text>
+  <rect x="465" y="400" width="270" height="110" class="box" fill="#e3fafc" stroke="#0b7285"/>
+  <text x="600" y="435" text-anchor="middle" class="h">spring-ai-vector-store</text>
+  <text x="600" y="462" text-anchor="middle" class="t">VectorStore / SearchRequest</text>
+  <text x="600" y="486" text-anchor="middle" class="t">Filter.Expression / Observation</text>
+  <rect x="860" y="400" width="270" height="110" class="box" fill="#ffe3e3" stroke="#c92a2a"/>
+  <text x="995" y="435" text-anchor="middle" class="h">auto-configurations + starters</text>
+  <text x="995" y="462" text-anchor="middle" class="t">ConditionalOnClass/Property</text>
+  <text x="995" y="486" text-anchor="middle" class="t">ConditionalOnMissingBean</text>
+  <rect x="240" y="570" width="720" height="76" class="box" fill="#f1f3f5" stroke="#495057"/>
+  <text x="600" y="600" text-anchor="middle" class="h">Provider implementations</text>
+  <text x="600" y="624" text-anchor="middle" class="t">models/*: OpenAI / Anthropic / Ollama / DeepSeek / Bedrock ...</text>
+  <path d="M600 156 V200" class="arrow"/>
+  <path d="M600 156 C420 175 290 190 205 220" class="arrow"/>
+  <path d="M600 156 C780 175 910 190 995 220" class="arrow"/>
+  <path d="M205 320 V400" class="arrow"/>
+  <path d="M600 320 V400" class="arrow"/>
+  <path d="M995 320 V400" class="arrow"/>
+  <path d="M205 510 C330 550 460 560 600 570" class="arrow"/>
+  <path d="M600 510 V570" class="arrow"/>
+  <path d="M995 510 C850 550 720 560 600 570" class="arrow"/>
+</svg>

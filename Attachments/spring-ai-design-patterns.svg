@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="760" viewBox="0 0 1260 760">
+  <style>
+    .title{font:700 30px Arial,sans-serif;fill:#1f2937}
+    .sub{font:14px Arial,sans-serif;fill:#475569}
+    .box{rx:14;stroke-width:2.5}
+    .h{font:700 17px Arial,sans-serif;fill:#111827}
+    .t{font:14px Arial,sans-serif;fill:#374151}
+    .small{font:13px Arial,sans-serif;fill:#475569}
+    .arrow{stroke:#64748b;stroke-width:2;fill:none;marker-end:url(#arrow)}
+  </style>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#64748b"/></marker></defs>
+  <rect width="1260" height="760" fill="#fff"/>
+  <text x="630" y="42" text-anchor="middle" class="title">Spring AI 设计模式地图</text>
+  <text x="630" y="66" text-anchor="middle" class="sub">设计目标：隔离厂商差异、组合横切能力、保持 Spring Boot 可装配、让 AI 流程可扩展</text>
+
+  <rect x="470" y="105" width="320" height="86" class="box" fill="#ebfbee" stroke="#2f9e44"/>
+  <text x="630" y="137" text-anchor="middle" class="h">核心主线</text>
+  <text x="630" y="162" text-anchor="middle" class="t">Prompt → AdvisorChain → ChatModel</text>
+  <text x="630" y="181" text-anchor="middle" class="small">所有模式围绕这条调用链服务</text>
+
+  <rect x="65" y="245" width="250" height="110" class="box" fill="#d0ebff" stroke="#1971c2"/>
+  <text x="190" y="276" text-anchor="middle" class="h">Builder + Fluent Interface</text>
+  <text x="190" y="303" text-anchor="middle" class="t">ChatClient.Builder</text>
+  <text x="190" y="325" text-anchor="middle" class="small">复杂默认配置可读、可组合</text>
+  <text x="190" y="344" text-anchor="middle" class="small">构建后 ChatClient 不可变</text>
+
+  <rect x="365" y="245" width="250" height="110" class="box" fill="#e7f5ff" stroke="#364fc7"/>
+  <text x="490" y="276" text-anchor="middle" class="h">Chain of Responsibility</text>
+  <text x="490" y="303" text-anchor="middle" class="t">DefaultAroundAdvisorChain</text>
+  <text x="490" y="325" text-anchor="middle" class="small">日志/记忆/RAG/工具解耦</text>
+  <text x="490" y="344" text-anchor="middle" class="small">按 order 组合横切能力</text>
+
+  <rect x="665" y="245" width="250" height="110" class="box" fill="#fff3bf" stroke="#e67700"/>
+  <text x="790" y="276" text-anchor="middle" class="h">Template Method</text>
+  <text x="790" y="303" text-anchor="middle" class="t">BaseAdvisor.before/after</text>
+  <text x="790" y="325" text-anchor="middle" class="small">固定调用骨架</text>
+  <text x="790" y="344" text-anchor="middle" class="small">子类只填增强逻辑</text>
+
+  <rect x="965" y="245" width="250" height="110" class="box" fill="#f3d9fa" stroke="#9c36b5"/>
+  <text x="1090" y="276" text-anchor="middle" class="h">Strategy</text>
+  <text x="1090" y="303" text-anchor="middle" class="t">RAG pipeline interfaces</text>
+  <text x="1090" y="325" text-anchor="middle" class="small">查询改写/检索/合并/后处理</text>
+  <text x="1090" y="344" text-anchor="middle" class="small">每步独立替换</text>
+
+  <rect x="65" y="430" width="250" height="110" class="box" fill="#ffe3e3" stroke="#c92a2a"/>
+  <text x="190" y="461" text-anchor="middle" class="h">Adapter</text>
+  <text x="190" y="488" text-anchor="middle" class="t">OpenAiChatModel / McpToolUtils</text>
+  <text x="190" y="510" text-anchor="middle" class="small">厂商 API / MCP 协议</text>
+  <text x="190" y="529" text-anchor="middle" class="small">适配为 Spring AI 抽象</text>
+
+  <rect x="365" y="430" width="250" height="110" class="box" fill="#e3fafc" stroke="#0b7285"/>
+  <text x="490" y="461" text-anchor="middle" class="h">Facade</text>
+  <text x="490" y="488" text-anchor="middle" class="t">ChatClient</text>
+  <text x="490" y="510" text-anchor="middle" class="small">屏蔽 Prompt/Options/Advisor</text>
+  <text x="490" y="529" text-anchor="middle" class="small">提供简洁应用入口</text>
+
+  <rect x="665" y="430" width="250" height="110" class="box" fill="#f1f3f5" stroke="#495057"/>
+  <text x="790" y="461" text-anchor="middle" class="h">Factory + DI</text>
+  <text x="790" y="488" text-anchor="middle" class="t">AutoConfiguration</text>
+  <text x="790" y="510" text-anchor="middle" class="small">按 classpath/property 创建 Bean</text>
+  <text x="790" y="529" text-anchor="middle" class="small">保留 ConditionalOnMissingBean 覆盖点</text>
+
+  <rect x="965" y="430" width="250" height="110" class="box" fill="#fff0f6" stroke="#d6336c"/>
+  <text x="1090" y="461" text-anchor="middle" class="h">Repository</text>
+  <text x="1090" y="488" text-anchor="middle" class="t">ChatMemoryRepository</text>
+  <text x="1090" y="510" text-anchor="middle" class="small">隔离 JDBC/Redis/MongoDB...</text>
+  <text x="1090" y="529" text-anchor="middle" class="small">记忆策略不依赖存储实现</text>
+
+  <rect x="215" y="610" width="250" height="100" class="box" fill="#edf2ff" stroke="#5f3dc4"/>
+  <text x="340" y="642" text-anchor="middle" class="h">Observer / Observation</text>
+  <text x="340" y="669" text-anchor="middle" class="t">Micrometer Observation</text>
+  <text x="340" y="691" text-anchor="middle" class="small">ChatClient/Advisor/Tool/VectorStore 全链路观测</text>
+
+  <rect x="505" y="610" width="250" height="100" class="box" fill="#fff9db" stroke="#f08c00"/>
+  <text x="630" y="642" text-anchor="middle" class="h">Prototype</text>
+  <text x="630" y="669" text-anchor="middle" class="t">ChatClient.Builder Bean</text>
+  <text x="630" y="691" text-anchor="middle" class="small">每个注入点获得独立可变 builder</text>
+
+  <rect x="795" y="610" width="250" height="100" class="box" fill="#e6fcf5" stroke="#087f5b"/>
+  <text x="920" y="642" text-anchor="middle" class="h">Command</text>
+  <text x="920" y="669" text-anchor="middle" class="t">ToolCallback</text>
+  <text x="920" y="691" text-anchor="middle" class="small">把可执行工具封装成统一调用对象</text>
+
+  <path d="M630 191 C520 215 300 225 190 245" class="arrow"/>
+  <path d="M630 191 C585 220 535 230 490 245" class="arrow"/>
+  <path d="M630 191 C690 220 745 230 790 245" class="arrow"/>
+  <path d="M630 191 C830 220 1010 230 1090 245" class="arrow"/>
+  <path d="M490 355 V430" class="arrow"/>
+  <path d="M790 355 V430" class="arrow"/>
+  <path d="M1090 355 V430" class="arrow"/>
+  <path d="M190 355 V430" class="arrow"/>
+</svg>
