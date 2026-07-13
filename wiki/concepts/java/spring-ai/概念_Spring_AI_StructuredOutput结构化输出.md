@@ -8,8 +8,8 @@ tags:
   - bean-output-converter
 summary: "Spring AI StructuredOutput 结构化输出：BeanOutputConverter 自动从 Java 类生成 JSON Schema → 注入 System Prompt → LLM 返回 JSON → Jackson 反序列化为 DTO，全过程类型安全。支持 Record/Class/ParameterizedTypeReference"
 sources:
-  - "raw/code/spring-ai/spring-ai-model/src/main/java/org/springframework/ai/converter/StructuredOutputConverter.java"
-  - "raw/code/spring-ai/spring-ai-model/src/main/java/org/springframework/ai/converter/BeanOutputConverter.java"
+  - "sai/spring-ai-model/src/main/java/org/springframework/ai/converter/StructuredOutputConverter.java"
+  - "sai/spring-ai-model/src/main/java/org/springframework/ai/converter/BeanOutputConverter.java"
 aliases:
   - Structured Output
   - 结构化输出
@@ -212,5 +212,5 @@ Person person = chatClient.prompt().user("...").call().entity(converter);
 
 ## 来源
 
-- `raw/code/spring-ai/spring-ai-model/src/main/java/org/springframework/ai/converter/StructuredOutputConverter.java`
-- `raw/code/spring-ai/spring-ai-model/src/main/java/org/springframework/ai/converter/BeanOutputConverter.java`
+- `sai/spring-ai-model/src/main/java/org/springframework/ai/converter/StructuredOutputConverter.java`
+- `sai/spring-ai-model/src/main/java/org/springframework/ai/converter/BeanOutputConverter.java`

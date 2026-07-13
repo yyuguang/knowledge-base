@@ -692,3 +692,10 @@
 - 未写入任何密码、Token、私钥或连接串值；后续 Nacos/Secret/Actuator 核验只记录键、来源、版本/状态和脱敏结果。
 
 ---
+
+## [2026-07-13] update | Windows 路径兼容性修复
+
+- 将 Spring AI 源码目录从 `raw/code/spring-ai/` 缩短为 `sai/`，消除 15 个超过 Windows 传统 260 字符限制的路径。
+- 同步更新 16 个 Spring AI wiki 页面中的源码引用，保持来源可追溯。
+
+---

@@ -9,7 +9,7 @@ tags:
   - framework
 summary: "Spring AI 项目实体：Spring 官方 AI 集成框架，v2.0.0-SNAPSHOT，Apache 2.0 许可证，提供 Chat/Embedding/Image/Audio/Moderation 多模型统一抽象，ChatClient + Advisor 链 + Tool Calling + RAG + ChatMemory + StructuredOutput + VectorStore + MCP，支持多模型厂商和多向量数据库"
 sources:
-  - "raw/code/spring-ai"
+  - "sai"
 aliases:
   - Spring AI
   - spring-ai

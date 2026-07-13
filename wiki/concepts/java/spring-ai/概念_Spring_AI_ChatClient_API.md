@@ -8,8 +8,8 @@ tags:
   - builder-pattern
 summary: "Spring AI ChatClient 声明式 Fluent API：Builder 模式、PromptUserSpec/PromptSystemSpec、CallResponseSpec/StreamResponseSpec、entity() 结构化输出、与 RestClient/WebClient 的设计对比"
 sources:
-  - "raw/code/spring-ai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/ChatClient.java"
-  - "raw/code/spring-ai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/DefaultChatClient.java"
+  - "sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/ChatClient.java"
+  - "sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/DefaultChatClient.java"
 aliases:
   - ChatClient
   - ChatClient API
@@ -223,7 +223,7 @@ Person person = chatClient.prompt()
 
 ## 来源
 
-- `raw/code/spring-ai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/ChatClient.java` (298 行，完整接口定义)
-- `raw/code/spring-ai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/DefaultChatClient.java` (实现)
-- `raw/code/spring-ai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/DefaultChatClientBuilder.java`
-- `raw/code/spring-ai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/DefaultChatClientUtils.java`
+- `sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/ChatClient.java` (298 行，完整接口定义)
+- `sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/DefaultChatClient.java` (实现)
+- `sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/DefaultChatClientBuilder.java`
+- `sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/DefaultChatClientUtils.java`

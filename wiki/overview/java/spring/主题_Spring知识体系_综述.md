@@ -9,7 +9,7 @@ tags:
 summary: "按 0-6 编号组织的 Spring 知识体系：根基、核心容器、AOP、数据访问、Web、Spring Boot 内核、扩展进阶；把每个知识点扩充为核心问题、源码锚点、流程图、面试表达与后续源码待补。"
 sources:
   - "raw/code/spring-framework"
-  - "raw/code/spring-ai"
+  - "sai"
 aliases:
   - "Spring 知识大纲"
   - "Spring 面试知识体系"
@@ -89,7 +89,7 @@ updated: "2026-05-12 21:22:48"
 
 详见：[[concepts/java/spring/概念_Spring_Boot内核_自动配置_条件注解_启动过程_Starter]]
 
-注意：本仓库当前没有 `raw/code/spring-boot`，Boot 部分先基于 Spring 机制和 `raw/code/spring-ai` 中的 Boot auto-configuration 样本整理，源码级深挖需要后续引入 Spring Boot 源码。
+注意：本仓库当前没有 `raw/code/spring-boot`，Boot 部分先基于 Spring 机制和 `sai` 中的 Boot auto-configuration 样本整理，源码级深挖需要后续引入 Spring Boot 源码。
 
 ### 6_扩展与进阶
 
@@ -113,7 +113,7 @@ updated: "2026-05-12 21:22:48"
 已读源码：
 
 - `raw/code/spring-framework`：IoC、AOP、事务、JDBC、Web、事件、资源、SPI。
-- `raw/code/spring-ai`：Spring Boot auto-configuration 的局部样本。
+- `sai`：Spring Boot auto-configuration 的局部样本。
 
 待补源码：
 

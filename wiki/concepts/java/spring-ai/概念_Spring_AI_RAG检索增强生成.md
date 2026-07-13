@@ -9,8 +9,8 @@ tags:
   - document
 summary: "Spring AI RAG 检索增强生成：RetrievalAugmentationAdvisor 实现 7 步 Modular RAG 流水线（Query 创建→变换→扩展→检索→合并→后处理→增强），每步都是可替换的策略接口，通过 Advisor 链自动嵌入每次 LLM 调用"
 sources:
-  - "raw/code/spring-ai/spring-ai-rag/src/main/java/org/springframework/ai/rag/advisor/RetrievalAugmentationAdvisor.java"
-  - "raw/code/spring-ai/spring-ai-rag/src/main/java/org/springframework/ai/rag/"
+  - "sai/spring-ai-rag/src/main/java/org/springframework/ai/rag/advisor/RetrievalAugmentationAdvisor.java"
+  - "sai/spring-ai-rag/src/main/java/org/springframework/ai/rag/"
 aliases:
   - RAG
   - Retrieval Augmented Generation
@@ -277,6 +277,6 @@ taskDecorator = ContextPropagatingTaskDecorator
 
 ## 来源
 
-- `raw/code/spring-ai/spring-ai-rag/src/main/java/org/springframework/ai/rag/advisor/RetrievalAugmentationAdvisor.java`
-- `raw/code/spring-ai/spring-ai-rag/src/main/java/org/springframework/ai/rag/Query.java`
-- `raw/code/spring-ai/spring-ai-rag/src/main/java/org/springframework/ai/rag/retrieval/search/DocumentRetriever.java`
+- `sai/spring-ai-rag/src/main/java/org/springframework/ai/rag/advisor/RetrievalAugmentationAdvisor.java`
+- `sai/spring-ai-rag/src/main/java/org/springframework/ai/rag/Query.java`
+- `sai/spring-ai-rag/src/main/java/org/springframework/ai/rag/retrieval/search/DocumentRetriever.java`

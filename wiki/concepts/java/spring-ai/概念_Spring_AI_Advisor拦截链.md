@@ -9,9 +9,9 @@ tags:
   - chain-of-responsibility
 summary: "Spring AI Advisor 拦截链：BaseAdvisor 模板方法（before/after）实现 AOP 环绕拦截，12 个内置 Advisor 覆盖日志/记忆/安全/工具/RAG 等横切关注点，链式调用机制与 Advisor 排序策略"
 sources:
-  - "raw/code/spring-ai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/api/BaseAdvisor.java"
-  - "raw/code/spring-ai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/api/AdvisorChain.java"
-  - "raw/code/spring-ai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/SimpleLoggerAdvisor.java"
+  - "sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/api/BaseAdvisor.java"
+  - "sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/api/AdvisorChain.java"
+  - "sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/SimpleLoggerAdvisor.java"
 aliases:
   - Advisor 链
   - Advisor Chain
@@ -262,8 +262,8 @@ public class TimingAdvisor implements BaseAdvisor {
 
 ## 来源
 
-- `raw/code/spring-ai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/api/BaseAdvisor.java`
-- `raw/code/spring-ai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/DefaultAroundAdvisorChain.java`
-- `raw/code/spring-ai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/SimpleLoggerAdvisor.java`
-- `raw/code/spring-ai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/MessageChatMemoryAdvisor.java`
-- `raw/code/spring-ai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/ToolCallAdvisor.java`
+- `sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/api/BaseAdvisor.java`
+- `sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/DefaultAroundAdvisorChain.java`
+- `sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/SimpleLoggerAdvisor.java`
+- `sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/MessageChatMemoryAdvisor.java`
+- `sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/ToolCallAdvisor.java`

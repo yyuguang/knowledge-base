@@ -7,10 +7,10 @@ tags:
   - auto-configuration
 summary: "Spring AI AutoConfiguration 自动配置：Starter 引入 autoconfigure + provider 模块，AutoConfiguration 通过 ConditionalOnClass/ConditionalOnProperty/ConditionalOnMissingBean 创建 ChatModel、ChatClient.Builder、VectorStore 等 Bean，实现依赖即用和厂商切换。"
 sources:
-  - "raw/code/spring-ai/starters/spring-ai-starter-model-openai/pom.xml"
-  - "raw/code/spring-ai/auto-configurations/models/spring-ai-autoconfigure-model-openai/src/main/java/org/springframework/ai/model/openai/autoconfigure/OpenAiChatAutoConfiguration.java"
-  - "raw/code/spring-ai/auto-configurations/models/chat/client/spring-ai-autoconfigure-model-chat-client/src/main/java/org/springframework/ai/model/chat/client/autoconfigure/ChatClientAutoConfiguration.java"
-  - "raw/code/spring-ai/auto-configurations/vector-stores/spring-ai-autoconfigure-vector-store-pgvector/src/main/java/org/springframework/ai/vectorstore/pgvector/autoconfigure/PgVectorStoreAutoConfiguration.java"
+  - "sai/starters/spring-ai-starter-model-openai/pom.xml"
+  - "sai/auto-configurations/models/spring-ai-autoconfigure-model-openai/src/main/java/org/springframework/ai/model/openai/autoconfigure/OpenAiChatAutoConfiguration.java"
+  - "sai/auto-configurations/models/chat/client/spring-ai-autoconfigure-model-chat-client/src/main/java/org/springframework/ai/model/chat/client/autoconfigure/ChatClientAutoConfiguration.java"
+  - "sai/auto-configurations/vector-stores/spring-ai-autoconfigure-vector-store-pgvector/src/main/java/org/springframework/ai/vectorstore/pgvector/autoconfigure/PgVectorStoreAutoConfiguration.java"
 aliases:
   - Spring AI 自动配置
   - Spring AI Starter
@@ -151,7 +151,7 @@ Spring AI 的自动配置层把“AI 能力”驯化成了 Spring Boot 应用的
 
 ## 来源
 
-- `raw/code/spring-ai/starters/spring-ai-starter-model-openai/pom.xml`
-- `raw/code/spring-ai/auto-configurations/models/spring-ai-autoconfigure-model-openai/src/main/java/org/springframework/ai/model/openai/autoconfigure/OpenAiChatAutoConfiguration.java`
-- `raw/code/spring-ai/auto-configurations/models/chat/client/spring-ai-autoconfigure-model-chat-client/src/main/java/org/springframework/ai/model/chat/client/autoconfigure/ChatClientAutoConfiguration.java`
-- `raw/code/spring-ai/auto-configurations/vector-stores/spring-ai-autoconfigure-vector-store-pgvector/src/main/java/org/springframework/ai/vectorstore/pgvector/autoconfigure/PgVectorStoreAutoConfiguration.java`
+- `sai/starters/spring-ai-starter-model-openai/pom.xml`
+- `sai/auto-configurations/models/spring-ai-autoconfigure-model-openai/src/main/java/org/springframework/ai/model/openai/autoconfigure/OpenAiChatAutoConfiguration.java`
+- `sai/auto-configurations/models/chat/client/spring-ai-autoconfigure-model-chat-client/src/main/java/org/springframework/ai/model/chat/client/autoconfigure/ChatClientAutoConfiguration.java`
+- `sai/auto-configurations/vector-stores/spring-ai-autoconfigure-vector-store-pgvector/src/main/java/org/springframework/ai/vectorstore/pgvector/autoconfigure/PgVectorStoreAutoConfiguration.java`

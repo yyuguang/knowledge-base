@@ -8,10 +8,10 @@ tags:
   - agent
 summary: "Spring AI MCP 集成：通过 MCP Client/Server 自动配置、ToolCallbackProvider、McpToolUtils 和注解扫描，把远程 MCP 工具转换为 Spring AI ToolCallback，也能把本地 Spring AI 工具暴露为 MCP Tool。"
 sources:
-  - "raw/code/spring-ai/mcp/common/src/main/java/org/springframework/ai/mcp/McpToolUtils.java"
-  - "raw/code/spring-ai/auto-configurations/mcp/spring-ai-autoconfigure-mcp-client-common/src/main/java/org/springframework/ai/mcp/client/common/autoconfigure/McpClientAutoConfiguration.java"
-  - "raw/code/spring-ai/auto-configurations/mcp/spring-ai-autoconfigure-mcp-client-common/src/main/java/org/springframework/ai/mcp/client/common/autoconfigure/McpToolCallbackAutoConfiguration.java"
-  - "raw/code/spring-ai/mcp/mcp-annotations/src/main/java/org/springframework/ai/mcp/annotation/McpTool.java"
+  - "sai/mcp/common/src/main/java/org/springframework/ai/mcp/McpToolUtils.java"
+  - "sai/auto-configurations/mcp/spring-ai-autoconfigure-mcp-client-common/src/main/java/org/springframework/ai/mcp/client/common/autoconfigure/McpClientAutoConfiguration.java"
+  - "sai/auto-configurations/mcp/spring-ai-autoconfigure-mcp-client-common/src/main/java/org/springframework/ai/mcp/client/common/autoconfigure/McpToolCallbackAutoConfiguration.java"
+  - "sai/mcp/mcp-annotations/src/main/java/org/springframework/ai/mcp/annotation/McpTool.java"
 aliases:
   - Spring AI MCP
   - Model Context Protocol
@@ -124,7 +124,7 @@ MCP 是 Spring AI 从“应用内 AI 框架”走向“工具生态连接层”�
 
 ## 来源
 
-- `raw/code/spring-ai/mcp/common/src/main/java/org/springframework/ai/mcp/McpToolUtils.java`
-- `raw/code/spring-ai/auto-configurations/mcp/spring-ai-autoconfigure-mcp-client-common/src/main/java/org/springframework/ai/mcp/client/common/autoconfigure/McpClientAutoConfiguration.java`
-- `raw/code/spring-ai/auto-configurations/mcp/spring-ai-autoconfigure-mcp-client-common/src/main/java/org/springframework/ai/mcp/client/common/autoconfigure/McpToolCallbackAutoConfiguration.java`
-- `raw/code/spring-ai/mcp/mcp-annotations/src/main/java/org/springframework/ai/mcp/annotation/McpTool.java`
+- `sai/mcp/common/src/main/java/org/springframework/ai/mcp/McpToolUtils.java`
+- `sai/auto-configurations/mcp/spring-ai-autoconfigure-mcp-client-common/src/main/java/org/springframework/ai/mcp/client/common/autoconfigure/McpClientAutoConfiguration.java`
+- `sai/auto-configurations/mcp/spring-ai-autoconfigure-mcp-client-common/src/main/java/org/springframework/ai/mcp/client/common/autoconfigure/McpToolCallbackAutoConfiguration.java`
+- `sai/mcp/mcp-annotations/src/main/java/org/springframework/ai/mcp/annotation/McpTool.java`
