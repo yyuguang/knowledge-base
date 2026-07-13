@@ -8,14 +8,7 @@
 .obsidian/graph.json
 .obsidian/plugins/*/data.json
 
-# Locally cloned source repositories; wiki pages retain the extracted knowledge
-raw/code/
-
-# Unlinked local drawing scratchpad
-Excalidraw/
-
-# Local scratch directories and editor files
-/concepts/
+# Editor files
 .idea/
 .vscode/
 *.swp
