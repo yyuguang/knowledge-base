@@ -6,6 +6,10 @@ updated: "2026-07-14"
 
 ## Sources（来源摘要）
 
+### 数据结构 / 《大话数据结构》
+
+- [[sources/data-structures/大话数据结构/index]] — 程杰《大话数据结构》的书内专属索引：九章复习页、章节依赖、学习边界与待迁移算法主题
+
 ### 电商 / mall-swarm
 
 - [[sources/ecommerce/mall-swarm/来源_mall-swarm_项目源码]] — 受限于工程/部署层证据的技术栈、模块、部署、外部依赖与 AI 可见性索引

@@ -716,3 +716,11 @@
 - 当前工作副本已设置 Git 本地配置 `core.longpaths=true`。Windows 使用该完整上游源码前仍需在系统中启用 Long Paths；该系统级设置不会随仓库提交。
 
 ---
+
+## [2026-07-14] ingest | raw/books/大话数据结构.pdf → wiki/sources/data-structures/大话数据结构/
+
+- 新建本书专属索引 `wiki/sources/data-structures/大话数据结构/index.md`，并按原书第 1–9 章建立九份独立复习页。
+- 各章记录定义、关键流程、复杂度/前提、易错点、前后关系、PDF 物理页定位及仅作 TODO 的通用知识候选主题。
+- 更新 `wiki/index.md`，仅增加本书专属索引入口；未创建或修改 `wiki/concepts/`、`wiki/overview/`、`wiki/comparisons/` 等通用知识页。
+
+---
