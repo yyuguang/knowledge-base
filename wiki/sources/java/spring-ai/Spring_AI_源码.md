@@ -9,13 +9,13 @@ tags:
   - framework
 summary: "Spring AI 2.0-SNAPSHOT 完整源码分析：Spring 官方 AI 集成框架，提供 Chat/Embedding/Image/Audio/Moderation 多模型统一抽象、ChatClient 流式 API、Advisor 拦截链、Tool Calling、RAG、ChatMemory、VectorStore、MCP 与 Spring Boot AutoConfiguration"
 sources:
-  - "sai (GitHub spring-projects/spring-ai, main branch, 2.0.0-SNAPSHOT)"
+  - "raw/sai (GitHub spring-projects/spring-ai, main branch, 2.0.0-SNAPSHOT)"
 aliases:
   - Spring AI 源码
   - Spring AI 源代码
 status: stable
 confidence: 0.95
-updated: "2026-05-12 00:00:00"
+updated: "2026-07-14 15:05:00"
 ---
 
 # Spring AI 源码

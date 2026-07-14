@@ -8,9 +8,9 @@ tags:
   - sliding-window
 summary: "Spring AI ChatMemory 对话记忆：MessageWindowChatMemory 滑动窗口（默认 20 条，SystemMessage 保护），通过 ChatMemoryRepository 接口支持 6 种持久化后端（JDBC/Redis/MongoDB/Cassandra/Neo4j/CosmosDB），MessageChatMemoryAdvisor 自动注入历史"
 sources:
-  - "sai/spring-ai-model/src/main/java/org/springframework/ai/chat/memory/ChatMemory.java"
-  - "sai/spring-ai-model/src/main/java/org/springframework/ai/chat/memory/MessageWindowChatMemory.java"
-  - "sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/MessageChatMemoryAdvisor.java"
+  - "raw/sai/spring-ai-model/src/main/java/org/springframework/ai/chat/memory/ChatMemory.java"
+  - "raw/sai/spring-ai-model/src/main/java/org/springframework/ai/chat/memory/MessageWindowChatMemory.java"
+  - "raw/sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/MessageChatMemoryAdvisor.java"
 aliases:
   - ChatMemory
   - 对话记忆
@@ -18,7 +18,7 @@ aliases:
   - 滑动窗口记忆
 status: evolving
 confidence: 0.95
-updated: "2026-05-10 14:00:00"
+updated: "2026-07-14 15:05:00"
 ---
 
 # 概念_Spring_AI_ChatMemory对话记忆
@@ -202,6 +202,6 @@ ChatClient client = ChatClient.builder(chatModel)
 
 ## 来源
 
-- `sai/spring-ai-model/src/main/java/org/springframework/ai/chat/memory/ChatMemory.java`
-- `sai/spring-ai-model/src/main/java/org/springframework/ai/chat/memory/MessageWindowChatMemory.java`
-- `sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/MessageChatMemoryAdvisor.java`
+- `raw/sai/spring-ai-model/src/main/java/org/springframework/ai/chat/memory/ChatMemory.java`
+- `raw/sai/spring-ai-model/src/main/java/org/springframework/ai/chat/memory/MessageWindowChatMemory.java`
+- `raw/sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/MessageChatMemoryAdvisor.java`

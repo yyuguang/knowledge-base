@@ -7,12 +7,12 @@ tags:
   - architecture
 summary: "Spring AI 设计模式整理：Builder/Fluent Interface、责任链、模板方法、策略、适配器、门面、自动配置工厂、Repository、Observation、Prototype、Command 等模式如何服务于厂商隔离、横切能力组合、RAG 流水线扩展和 Spring Boot 可装配性。"
 sources:
-  - "sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/DefaultChatClientBuilder.java"
-  - "sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/DefaultAroundAdvisorChain.java"
-  - "sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/api/BaseAdvisor.java"
-  - "sai/spring-ai-rag/src/main/java/org/springframework/ai/rag/advisor/RetrievalAugmentationAdvisor.java"
-  - "sai/spring-ai-model/src/main/java/org/springframework/ai/model/tool/DefaultToolCallingManager.java"
-  - "sai/auto-configurations/"
+  - "raw/sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/DefaultChatClientBuilder.java"
+  - "raw/sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/DefaultAroundAdvisorChain.java"
+  - "raw/sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/api/BaseAdvisor.java"
+  - "raw/sai/spring-ai-rag/src/main/java/org/springframework/ai/rag/advisor/RetrievalAugmentationAdvisor.java"
+  - "raw/sai/spring-ai-model/src/main/java/org/springframework/ai/model/tool/DefaultToolCallingManager.java"
+  - "raw/sai/auto-configurations/"
 aliases:
   - Spring AI 设计模式
   - Spring AI patterns
@@ -20,7 +20,7 @@ aliases:
 status: "evolving"
 confidence: 0.9
 created: "2026-05-12 00:00:00"
-updated: "2026-05-12 00:00:00"
+updated: "2026-07-14 15:05:00"
 ---
 
 # 概念：Spring AI 设计模式
@@ -333,10 +333,10 @@ ChatClient
 
 ## 来源
 
-- `sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/DefaultChatClientBuilder.java`
-- `sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/DefaultChatClient.java`
-- `sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/DefaultAroundAdvisorChain.java`
-- `sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/api/BaseAdvisor.java`
-- `sai/spring-ai-rag/src/main/java/org/springframework/ai/rag/advisor/RetrievalAugmentationAdvisor.java`
-- `sai/spring-ai-model/src/main/java/org/springframework/ai/model/tool/DefaultToolCallingManager.java`
-- `sai/spring-ai-model/src/main/java/org/springframework/ai/tool/method/MethodToolCallback.java`
+- `raw/sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/DefaultChatClientBuilder.java`
+- `raw/sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/DefaultChatClient.java`
+- `raw/sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/DefaultAroundAdvisorChain.java`
+- `raw/sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/api/BaseAdvisor.java`
+- `raw/sai/spring-ai-rag/src/main/java/org/springframework/ai/rag/advisor/RetrievalAugmentationAdvisor.java`
+- `raw/sai/spring-ai-model/src/main/java/org/springframework/ai/model/tool/DefaultToolCallingManager.java`
+- `raw/sai/spring-ai-model/src/main/java/org/springframework/ai/tool/method/MethodToolCallback.java`

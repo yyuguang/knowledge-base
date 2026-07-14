@@ -1,5 +1,5 @@
 ---
-updated: "2026-07-13"
+updated: "2026-07-14"
 ---
 
 # Wiki 索引
@@ -18,6 +18,10 @@ updated: "2026-07-13"
 
 ## Overviews（综述）
 
+### Java / 数据结构与算法
+
+- [[overview/java/data-structures-algorithms/主题_数据结构与算法_综述]] — 面向 Java 开发者的数据结构、算法范式与题型复盘章节入口
+
 ### 电商 / mall-swarm
 
 - [[overview/ecommerce/mall-swarm/主题_mall-swarm_架构全景_综述]] — mall-swarm 模块、运行时组件、部署形态、数据/消息边界和 AI 二开学习路线
@@ -27,6 +31,11 @@ updated: "2026-07-13"
 - [[overview/java/mybatis/主题_MyBatis源码架构_综述]] — MyBatis 从配置编译、XML mapper 解析、Mapper 代理到 Executor 执行、ResultSetHandler 映射、缓存和插件扩展的源码架构 ![[Attachments/mybatis-source-architecture.excalidraw]] ![[Attachments/mybatis-execution-flow.excalidraw]] ![[Attachments/mybatis-mappedstatement-build-flow.excalidraw]] ![[Attachments/mybatis-resultsethandler-mapping-flow.excalidraw]]
 
 ## Concepts（概念）
+
+### Java / 数据结构与算法
+
+- [[concepts/java/data-structures-algorithms/foundations/概念_算法复杂度分析]] — 用渐近符号分析时间与空间成本，是比较方案和估算规模边界的共同语言
+- [[concepts/java/data-structures-algorithms/foundations/概念_数据结构抽象与Java实现]] — 区分 ADT 与具体实现，并将常见结构映射到 Java 集合和自定义实现
 
 ### 电商 / mall-swarm
 

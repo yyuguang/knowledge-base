@@ -699,3 +699,20 @@
 - 同步更新 16 个 Spring AI wiki 页面中的源码引用，保持来源可追溯。
 
 ---
+
+## [2026-07-14] create | 数据结构与算法章节基础骨架
+
+- 新建 `overview/java/data-structures-algorithms/主题_数据结构与算法_综述.md`，定义面向 Java 开发者的章节范围、学习框架、目录规划和 Java 实践约定。
+- 新建 `concepts/java/data-structures-algorithms/foundations/概念_算法复杂度分析.md` 与 `概念_数据结构抽象与Java实现.md`，作为后续数据结构和算法专题的共同前提。
+- 创建线性结构、哈希、树、堆、图、排序、查找、递归与分治、回溯、动态规划、贪心、字符串及题型复盘目录。
+- 更新 `index.md`，添加数据结构与算法章节入口。
+
+---
+
+## [2026-07-14] relocate | Spring AI 源码归位至 raw
+
+- 经用户明确授权，将根目录 `sai/` 完整迁移至 `raw/sai/`；源码内容未改写。
+- 将当前 wiki 中的 Spring AI 源码锚点从 `sai/` 同步为 `raw/sai/`，并更新关联来源、实体和 Spring 总览说明。
+- 当前工作副本已设置 Git 本地配置 `core.longpaths=true`。Windows 使用该完整上游源码前仍需在系统中启用 Long Paths；该系统级设置不会随仓库提交。
+
+---

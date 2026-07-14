@@ -7,18 +7,18 @@ tags:
   - architecture
 summary: "Spring AI 源码级架构综述：从 AutoConfiguration 装配 Bean，到 ChatClient 构建请求、Advisor 链执行、Tool Calling 递归循环、RAG 检索增强、VectorStore 可移植检索和 MCP 工具桥接。"
 sources:
-  - "sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/DefaultChatClient.java"
-  - "sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/DefaultAroundAdvisorChain.java"
-  - "sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/ToolCallAdvisor.java"
-  - "sai/spring-ai-rag/src/main/java/org/springframework/ai/rag/advisor/RetrievalAugmentationAdvisor.java"
-  - "sai/auto-configurations/"
+  - "raw/sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/DefaultChatClient.java"
+  - "raw/sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/DefaultAroundAdvisorChain.java"
+  - "raw/sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/ToolCallAdvisor.java"
+  - "raw/sai/spring-ai-rag/src/main/java/org/springframework/ai/rag/advisor/RetrievalAugmentationAdvisor.java"
+  - "raw/sai/auto-configurations/"
 aliases:
   - Spring AI 源码架构
   - Spring AI 源码综述
 status: "evolving"
 confidence: 0.9
 created: "2026-05-12 00:00:00"
-updated: "2026-05-12 00:00:00"
+updated: "2026-07-14 15:05:00"
 ---
 
 # 主题：Spring AI 源码架构 综述

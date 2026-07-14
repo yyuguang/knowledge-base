@@ -9,14 +9,14 @@ tags:
 summary: "按 0-6 编号组织的 Spring 知识体系：根基、核心容器、AOP、数据访问、Web、Spring Boot 内核、扩展进阶；把每个知识点扩充为核心问题、源码锚点、流程图、面试表达与后续源码待补。"
 sources:
   - "raw/code/spring-framework"
-  - "sai"
+  - "raw/sai"
 aliases:
   - "Spring 知识大纲"
   - "Spring 面试知识体系"
 status: "evolving"
 confidence: 0.82
 created: "2026-05-12 21:22:48"
-updated: "2026-05-12 21:22:48"
+updated: "2026-07-14 15:05:00"
 ---
 
 # 主题：Spring知识体系 综述
@@ -89,7 +89,7 @@ updated: "2026-05-12 21:22:48"
 
 详见：[[concepts/java/spring/概念_Spring_Boot内核_自动配置_条件注解_启动过程_Starter]]
 
-注意：本仓库当前没有 `raw/code/spring-boot`，Boot 部分先基于 Spring 机制和 `sai` 中的 Boot auto-configuration 样本整理，源码级深挖需要后续引入 Spring Boot 源码。
+注意：本仓库当前没有 `raw/code/spring-boot`，Boot 部分先基于 Spring 机制和 `raw/sai` 中的 Boot auto-configuration 样本整理，源码级深挖需要后续引入 Spring Boot 源码。
 
 ### 6_扩展与进阶
 
@@ -113,7 +113,7 @@ updated: "2026-05-12 21:22:48"
 已读源码：
 
 - `raw/code/spring-framework`：IoC、AOP、事务、JDBC、Web、事件、资源、SPI。
-- `sai`：Spring Boot auto-configuration 的局部样本。
+- `raw/sai`：Spring Boot auto-configuration 的局部样本。
 
 待补源码：
 
@@ -126,4 +126,3 @@ updated: "2026-05-12 21:22:48"
 - [[overview/java/spring-framework/主题_Spring_Framework源码学习_综述]] — 已有源码学习综述。
 - [[overview/java/spring-framework/主题_Spring_Framework设计模式_综述]] — 设计模式专题。
 - [[concepts/java/spring-ai/概念_Spring_AI_AutoConfiguration自动配置]] — Spring AI 中的 Boot 自动配置样本。
-

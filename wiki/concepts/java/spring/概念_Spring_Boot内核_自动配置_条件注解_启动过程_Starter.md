@@ -8,22 +8,22 @@ tags:
   - starter
 summary: "Spring Boot 内核：自动配置通过候选 AutoConfiguration 类和条件注解决定注册哪些 Bean；SpringApplication.run 负责准备环境、创建上下文、加载 BeanDefinition、刷新上下文；自定义 Starter 由依赖、自动配置类、条件注解、属性类和 AutoConfiguration.imports 组成。"
 sources:
-  - "sai/auto-configurations"
-  - "sai/starters"
+  - "raw/sai/auto-configurations"
+  - "raw/sai/starters"
 aliases:
   - "Spring Boot 内核"
   - "自动配置 条件注解 启动过程 Starter"
 status: "draft"
 confidence: 0.7
 created: "2026-05-12 21:22:48"
-updated: "2026-05-12 21:22:48"
+updated: "2026-07-14 15:05:00"
 ---
 
 # 概念：Spring Boot内核 自动配置 条件注解 启动过程 Starter
 
 ## 来源边界
 
-本仓库当前没有 `raw/code/spring-boot`，因此本页先按 Spring Boot 机制和 `sai` 中的 auto-configuration/starter 样本整理。`SpringApplication.run()`、`AutoConfigurationImportSelector`、`ConditionEvaluator` 等源码级深挖需要后续引入 Spring Boot 源码。
+本仓库当前没有 `raw/code/spring-boot`，因此本页先按 Spring Boot 机制和 `raw/sai` 中的 auto-configuration/starter 样本整理。`SpringApplication.run()`、`AutoConfigurationImportSelector`、`ConditionEvaluator` 等源码级深挖需要后续引入 Spring Boot 源码。
 
 ## 51_自动配置原理（@EnableAutoConfiguration）
 
@@ -44,7 +44,7 @@ updated: "2026-05-12 21:22:48"
 META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports
 ```
 
-列出自动配置类。`sai` 中大量 auto-configuration 模块使用这种方式，例如向量库、模型、tool calling 等自动配置。
+列出自动配置类。`raw/sai` 中大量 auto-configuration 模块使用这种方式，例如向量库、模型、tool calling 等自动配置。
 
 ## 52_条件注解（@Conditional族）
 
@@ -130,4 +130,3 @@ public class XxxAutoConfiguration {
 - [[concepts/java/spring-ai/概念_Spring_AI_AutoConfiguration自动配置]] — Spring AI 自动配置样本。
 - [[concepts/java/spring-framework/概念_Spring_Framework_配置类解析与依赖解析]] — Framework 配置类解析基础。
 - [[overview/java/spring/主题_Spring知识体系_综述]] — 返回大纲。
-

@@ -9,8 +9,8 @@ tags:
   - react
 summary: "Spring AI Tool Calling：@Tool 注解声明工具 → MethodToolCallback 反射封装 → ToolCallAdvisor 编排 ReAct Agent 循环（思考→行动→观察），支持 parallelToolCalls 和 returnDirect 模式"
 sources:
-  - "sai/spring-ai-model/src/main/java/org/springframework/ai/tool/annotation/Tool.java"
-  - "sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/ToolCallAdvisor.java"
+  - "raw/sai/spring-ai-model/src/main/java/org/springframework/ai/tool/annotation/Tool.java"
+  - "raw/sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/ToolCallAdvisor.java"
 aliases:
   - Tool Calling
   - Function Calling
@@ -18,7 +18,7 @@ aliases:
   - @Tool
 status: evolving
 confidence: 0.95
-updated: "2026-05-12 00:00:00"
+updated: "2026-07-14 15:05:00"
 ---
 
 # 概念_Spring_AI_ToolCalling工具调用
@@ -301,7 +301,7 @@ Tool Calling 有两条可能路径：provider 内部执行，以及 `ToolCallAdv
 
 ## 来源
 
-- `sai/spring-ai-model/src/main/java/org/springframework/ai/tool/annotation/Tool.java`
-- `sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/ToolCallAdvisor.java`
-- `sai/spring-ai-model/src/main/java/org/springframework/ai/model/tool/DefaultToolCallingManager.java`
-- `sai/spring-ai-model/src/main/java/org/springframework/ai/tool/method/MethodToolCallback.java`
+- `raw/sai/spring-ai-model/src/main/java/org/springframework/ai/tool/annotation/Tool.java`
+- `raw/sai/spring-ai-client-chat/src/main/java/org/springframework/ai/chat/client/advisor/ToolCallAdvisor.java`
+- `raw/sai/spring-ai-model/src/main/java/org/springframework/ai/model/tool/DefaultToolCallingManager.java`
+- `raw/sai/spring-ai-model/src/main/java/org/springframework/ai/tool/method/MethodToolCallback.java`

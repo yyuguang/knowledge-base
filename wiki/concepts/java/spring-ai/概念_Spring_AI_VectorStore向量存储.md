@@ -7,10 +7,10 @@ tags:
   - rag
 summary: "Spring AI VectorStore 向量存储抽象：以 add/delete/similaritySearch 统一不同向量数据库，SearchRequest 封装 query/topK/similarityThreshold/filterExpression，Filter.Expression 提供跨存储可移植的元数据过滤 AST。"
 sources:
-  - "sai/spring-ai-vector-store/src/main/java/org/springframework/ai/vectorstore/VectorStore.java"
-  - "sai/spring-ai-vector-store/src/main/java/org/springframework/ai/vectorstore/SearchRequest.java"
-  - "sai/spring-ai-vector-store/src/main/java/org/springframework/ai/vectorstore/filter/Filter.java"
-  - "sai/spring-ai-vector-store/src/main/java/org/springframework/ai/vectorstore/observation/AbstractObservationVectorStore.java"
+  - "raw/sai/spring-ai-vector-store/src/main/java/org/springframework/ai/vectorstore/VectorStore.java"
+  - "raw/sai/spring-ai-vector-store/src/main/java/org/springframework/ai/vectorstore/SearchRequest.java"
+  - "raw/sai/spring-ai-vector-store/src/main/java/org/springframework/ai/vectorstore/filter/Filter.java"
+  - "raw/sai/spring-ai-vector-store/src/main/java/org/springframework/ai/vectorstore/observation/AbstractObservationVectorStore.java"
 aliases:
   - Spring AI VectorStore
   - VectorStore
@@ -18,7 +18,7 @@ aliases:
 status: "evolving"
 confidence: 0.92
 created: "2026-05-12 00:00:00"
-updated: "2026-05-12 00:00:00"
+updated: "2026-07-14 15:05:00"
 ---
 
 # 概念：Spring AI VectorStore 向量存储
@@ -160,7 +160,7 @@ VectorStore 是 Spring AI 把“知识库”工程化的关键位置。ChatModel
 
 ## 来源
 
-- `sai/spring-ai-vector-store/src/main/java/org/springframework/ai/vectorstore/VectorStore.java`
-- `sai/spring-ai-vector-store/src/main/java/org/springframework/ai/vectorstore/SearchRequest.java`
-- `sai/spring-ai-vector-store/src/main/java/org/springframework/ai/vectorstore/filter/Filter.java`
-- `sai/spring-ai-vector-store/src/main/java/org/springframework/ai/vectorstore/observation/AbstractObservationVectorStore.java`
+- `raw/sai/spring-ai-vector-store/src/main/java/org/springframework/ai/vectorstore/VectorStore.java`
+- `raw/sai/spring-ai-vector-store/src/main/java/org/springframework/ai/vectorstore/SearchRequest.java`
+- `raw/sai/spring-ai-vector-store/src/main/java/org/springframework/ai/vectorstore/filter/Filter.java`
+- `raw/sai/spring-ai-vector-store/src/main/java/org/springframework/ai/vectorstore/observation/AbstractObservationVectorStore.java`
