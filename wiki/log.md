@@ -1,12 +1,12 @@
-## [2026-07-13] create | mall-swarm mall-search 源码深度学习
+﻿## [2026-07-13] create | mall-swarm mall-search 源码深度学习
 
 ### created
 
-- `concepts/ecommerce/mall-swarm/概念_mall-swarm_mall-search设计.md`：基于 mall-search、商品写入/portal 检索源码、Nacos 配置、SQL 与部署文件，记录 `pms` 索引/Document/mapping、MySQL→ES→API Mermaid 数据流、字段映射、查询聚合、手工同步、一致性风险、Redis 边界、防滥用缺口及关键词/过滤/向量/RAG 对比。
+- `20-projects/mall-swarm/architecture/概念_mall-swarm_mall-search设计.md`：基于 mall-search、商品写入/portal 检索源码、Nacos 配置、SQL 与部署文件，记录 `pms` 索引/Document/mapping、MySQL→ES→API Mermaid 数据流、字段映射、查询聚合、手工同步、一致性风险、Redis 边界、防滥用缺口及关键词/过滤/向量/RAG 对比。
 
 ### updated
 
-- `overview/ecommerce/mall-swarm/主题_mall-swarm_架构全景_综述.md`
+- `20-projects/mall-swarm/architecture/主题_mall-swarm_架构全景_综述.md`
 - `index.md`
 - `log.md`（本次记录）
 
@@ -21,14 +21,14 @@
 
 ### created
 
-- `concepts/ecommerce/mall-swarm/概念_mall-swarm_mall-auth设计.md`
+- `20-projects/mall-swarm/architecture/概念_mall-swarm_mall-auth设计.md`
   - 以 auth/admin/portal/gateway 源码、POM、Nacos 导入配置和部署清单为证据，确认 `mall-auth` 是按 `clientId` 的 Feign 登录分流层，不是 OAuth2 或自主签发 Token 的统一认证中心。
   - 覆盖管理员/会员身份边界、Sa-Token Simple JWT、Redis 路径权限表、Token 生命周期、服务间上下文传播缺口、Gateway/下游旁路风险。
   - 新增登录到受保护 API 时序图、Token/用户上下文传播图、权限边界表及明确标记为“二开建议”的 AI 工具最小权限设计。
 
 ### updated
 
-- `overview/ecommerce/mall-swarm/主题_mall-swarm_架构全景_综述.md`（补充认证与授权结论及部署旁路风险）
+- `20-projects/mall-swarm/architecture/主题_mall-swarm_架构全景_综述.md`（补充认证与授权结论及部署旁路风险）
 - `index.md`（新增 mall-auth 概念页索引）
 - `log.md`（本次记录）
 
@@ -42,10 +42,10 @@
 ## [2026-07-13] create | mall-swarm 第三轮：mall-gateway 深度学习
 
 ### created
-- `concepts/ecommerce/mall-swarm/概念_mall-swarm_mall-gateway设计.md`：仅以网关源码、Nacos 配置导入、允许范围内的 auth/common 源码和目标服务基础配置为证据，梳理静态 `lb://` 路由与 discovery locator、路由图/路由表、Sa-Token 双账号鉴权、权限 Redis 状态、CORS、异常 envelope、Knife4j 聚合、WebFlux/MVC 衔接、过滤器顺序证据边界与 AI API 二开建议。
+- `20-projects/mall-swarm/architecture/概念_mall-swarm_mall-gateway设计.md`：仅以网关源码、Nacos 配置导入、允许范围内的 auth/common 源码和目标服务基础配置为证据，梳理静态 `lb://` 路由与 discovery locator、路由图/路由表、Sa-Token 双账号鉴权、权限 Redis 状态、CORS、异常 envelope、Knife4j 聚合、WebFlux/MVC 衔接、过滤器顺序证据边界与 AI API 二开建议。
 
 ### updated
-- `overview/ecommerce/mall-swarm/主题_mall-swarm_架构全景_综述.md`：补入 Gateway 静态/动态路由、鉴权与 AI 边缘层结论入口。
+- `20-projects/mall-swarm/architecture/主题_mall-swarm_架构全景_综述.md`：补入 Gateway 静态/动态路由、鉴权与 AI 边缘层结论入口。
 - `index.md`：新增 mall-swarm mall-gateway 概念页入口。
 - `log.md`（本次记录）。
 
@@ -58,10 +58,10 @@
 ## [2026-07-13] create | mall-swarm 第三轮：mall-admin 后台管理深度学习
 
 ### created
-- `concepts/ecommerce/mall-swarm/概念_mall-swarm_mall-admin设计.md`：基于 admin、common、mbg、admin 配置、相关 SQL 与 auth→admin Feign 接口，建立后台功能模块图、三张调用链时序图、RBAC 数据关系、SPU/SKU/库存和订单发货证据、OSS/MinIO 边界、高中低 API 风险清单与 AI 管理助手工具白名单草案。
+- `20-projects/mall-swarm/architecture/概念_mall-swarm_mall-admin设计.md`：基于 admin、common、mbg、admin 配置、相关 SQL 与 auth→admin Feign 接口，建立后台功能模块图、三张调用链时序图、RBAC 数据关系、SPU/SKU/库存和订单发货证据、OSS/MinIO 边界、高中低 API 风险清单与 AI 管理助手工具白名单草案。
 
 ### updated
-- `overview/ecommerce/mall-swarm/主题_mall-swarm_架构全景_综述.md`：补充 mall-admin 已证实边界、搜索同步与路径鉴权待验证项。
+- `20-projects/mall-swarm/architecture/主题_mall-swarm_架构全景_综述.md`：补充 mall-admin 已证实边界、搜索同步与路径鉴权待验证项。
 - `index.md`：新增 mall-admin 概念页入口。
 - `log.md`（本次记录）
 
@@ -75,10 +75,10 @@
 ## [2026-07-13] create | mall-swarm 第三轮：mall-monitor 深度学习
 
 ### created
-- `concepts/ecommerce/mall-swarm/概念_mall-swarm_mall-monitor设计.md`：以 mall-monitor 源码、六个业务服务的 POM/Actuator 配置、共享 Logback、Docker/K8s 部署文件为证据，记录 Admin Server 启动/认证/Nacos 发现、客户端与 Actuator 暴露、ELK/Logstash 链路、请求关联边界、风险清单及 AI 可观测性二开指标。
+- `20-projects/mall-swarm/architecture/概念_mall-swarm_mall-monitor设计.md`：以 mall-monitor 源码、六个业务服务的 POM/Actuator 配置、共享 Logback、Docker/K8s 部署文件为证据，记录 Admin Server 启动/认证/Nacos 发现、客户端与 Actuator 暴露、ELK/Logstash 链路、请求关联边界、风险清单及 AI 可观测性二开指标。
 
 ### updated
-- `overview/ecommerce/mall-swarm/主题_mall-swarm_架构全景_综述.md`：补充监控与可观测性学习入口和关键安全边界。
+- `20-projects/mall-swarm/architecture/主题_mall-swarm_架构全景_综述.md`：补充监控与可观测性学习入口和关键安全边界。
 - `index.md`：新增 mall-monitor 概念页入口。
 - `log.md`（本次记录）
 
@@ -91,10 +91,10 @@
 ## [2026-07-13] create | mall-swarm 第二轮：mall-mbg 数据访问层深度学习
 
 ### created
-- `concepts/ecommerce/mall-swarm/概念_mall-swarm_mall-mbg设计.md`：以 MBG 配置、生成物、`mall.sql` 与 admin/portal 直接调用为证据，记录 76 表生成边界、领域分组、生成/手写 DAO/数据库关系图、Example/分页/批量更新风险、状态与金额约定、AI 数据访问安全表、再生成流程和待验证事项。
+- `20-projects/mall-swarm/architecture/概念_mall-swarm_mall-mbg设计.md`：以 MBG 配置、生成物、`mall.sql` 与 admin/portal 直接调用为证据，记录 76 表生成边界、领域分组、生成/手写 DAO/数据库关系图、Example/分页/批量更新风险、状态与金额约定、AI 数据访问安全表、再生成流程和待验证事项。
 
 ### updated
-- `overview/ecommerce/mall-swarm/主题_mall-swarm_架构全景_综述.md`：补充 mall-mbg 学习入口与数据访问/AI 数据最小化结论。
+- `20-projects/mall-swarm/architecture/主题_mall-swarm_架构全景_综述.md`：补充 mall-mbg 学习入口与数据访问/AI 数据最小化结论。
 - `index.md`：新增 mall-swarm mall-mbg 概念页入口。
 - `log.md`（本次记录）
 
@@ -107,10 +107,10 @@
 ## [2026-07-13] update | mall-swarm mall-common 源码深度学习
 
 ### created
-- `concepts/ecommerce/mall-swarm/概念_mall-swarm_mall-common设计.md`：基于 `mall-common/**`、根 POM 与直接依赖服务的 POM/import/config，记录共享契约、Redis、异常、日志、OpenAPI/Feign/LoadBalancer 的真实边界；包含依赖图与 AI 二开边界表。
+- `20-projects/mall-swarm/architecture/概念_mall-swarm_mall-common设计.md`：基于 `mall-common/**`、根 POM 与直接依赖服务的 POM/import/config，记录共享契约、Redis、异常、日志、OpenAPI/Feign/LoadBalancer 的真实边界；包含依赖图与 AI 二开边界表。
 
 ### updated
-- `overview/ecommerce/mall-swarm/主题_mall-swarm_架构全景_综述.md`（补充 mall-common 边界链接）
+- `20-projects/mall-swarm/architecture/主题_mall-swarm_架构全景_综述.md`（补充 mall-common 边界链接）
 - `index.md`（新增 mall-common 概念页索引）
 - `log.md`（本次记录）
 
@@ -122,9 +122,9 @@
 ## [2026-07-13] create | mall-swarm 项目全景摸底（受限工程/部署证据）
 
 ### created
-- `sources/ecommerce/mall-swarm/来源_mall-swarm_项目源码.md`：记录根构建、模块 POM、启动入口、配置、Docker/K8s/脚本、数据库脚本目录与 AI 依赖检索证据边界。
-- `overview/ecommerce/mall-swarm/主题_mall-swarm_架构全景_综述.md`：输出模块地图、Mermaid 运行时组件图、高层请求/消息/数据边界、技术证据、AI 不确定项和核心业务学习路线。
-- `entities/ecommerce/项目_mall-swarm.md`：建立项目实体与来源/综述入口。
+- `30-sources/repositories/mall-swarm/来源_mall-swarm_项目源码.md`：记录根构建、模块 POM、启动入口、配置、Docker/K8s/脚本、数据库脚本目录与 AI 依赖检索证据边界。
+- `20-projects/mall-swarm/architecture/主题_mall-swarm_架构全景_综述.md`：输出模块地图、Mermaid 运行时组件图、高层请求/消息/数据边界、技术证据、AI 不确定项和核心业务学习路线。
+- `20-projects/mall-swarm/项目_mall-swarm.md`：建立项目实体与来源/综述入口。
 
 ### updated
 - `index.md`：新增 Ecommerce / mall-swarm 的 source、overview、entity 索引。
@@ -139,8 +139,8 @@
 ## [2026-07-13] create | mall-swarm 第一轮：项目入口与模块地图
 
 ### created
-- `sources/java/mall-swarm/来源_mall-swarm_项目入口与模块地图.md`：以根 POM、模块 POM、启动类、环境配置与网关配置为证据，记录模块依赖、七服务入口、Nacos 配置加载、路由与风险信号。
-- `overview/java/mall-swarm/主题_mall-swarm_项目入口与模块地图.md`：形成 mall-swarm 的首张架构地图，明确已知边界、AI 二开切入原则与下一轮问题。
+- `30-sources/repositories/mall-swarm/来源_mall-swarm_项目入口与模块地图.md`：以根 POM、模块 POM、启动类、环境配置与网关配置为证据，记录模块依赖、七服务入口、Nacos 配置加载、路由与风险信号。
+- `20-projects/mall-swarm/architecture/主题_mall-swarm_项目入口与模块地图.md`：形成 mall-swarm 的首张架构地图，明确已知边界、AI 二开切入原则与下一轮问题。
 
 ### updated
 - `index.md`：新增 mall-swarm 的 source 与 overview 入口。
@@ -152,10 +152,10 @@
 
 ---
 
-## [2026-05-14] create | wiki/comparisons/java/ai-frameworks/Spring_AI_vs_LangChain4j.md
+## [2026-05-14] create | wiki/40-maps/比较/java/ai-frameworks/Spring_AI_vs_LangChain4j.md
 
 ### created
-- `comparisons/java/ai-frameworks/Spring_AI_vs_LangChain4j.md`：Spring AI vs LangChain4j 系统性对比（出身、设计哲学、API 风格、编排机制、Tool Calling、RAG、厂商可移植、Spring 耦合、成熟度、选择建议）。
+- `40-maps/比较/java/ai-frameworks/Spring_AI_vs_LangChain4j.md`：Spring AI vs LangChain4j 系统性对比（出身、设计哲学、API 风格、编排机制、Tool Calling、RAG、厂商可移植、Spring 耦合、成熟度、选择建议）。
 
 ### updated
 - `index.md`：新增 Comparisons / Java AI Frameworks 索引。
@@ -169,14 +169,14 @@
 ## [2026-05-13] update | MyBatis 第三轮深挖：DefaultResultSetHandler 结果映射机制
 
 ### created
-- `concepts/java/mybatis/概念_MyBatis_ResultSetHandler结果映射机制.md`：深挖 `DefaultResultSetHandler`，整理自动映射、显式属性映射、nested query、nested resultMap、延迟加载、对象创建策略、collection 合并和 `PendingConstructorCreation`。
+- `10-domains/java/mybatis/概念_MyBatis_ResultSetHandler结果映射机制.md`：深挖 `DefaultResultSetHandler`，整理自动映射、显式属性映射、nested query、nested resultMap、延迟加载、对象创建策略、collection 合并和 `PendingConstructorCreation`。
 - `Attachments/mybatis-resultsethandler-mapping-flow.excalidraw`：ResultSetHandler 结果映射流程图。
 
 ### updated
-- `sources/java/mybatis/来源_MyBatis_3_源码.md`：新增结果映射链路与源码入口。
-- `overview/java/mybatis/主题_MyBatis源码架构_综述.md`：新增第三轮深挖结论，移除 ResultSetHandler TODO，并更新后续路线。
-- `concepts/java/mybatis/概念_MyBatis执行器缓存与插件链.md`：补充到 ResultSetHandler 深挖页的链接。
-- `concepts/java/mybatis/概念_MyBatis_XML语句解析与MappedStatement构建.md`：补充 `ResultMap/ResultMapping` 与结果映射阶段的关系。
+- `30-sources/repositories/来源_MyBatis_3_源码.md`：新增结果映射链路与源码入口。
+- `10-domains/java/mybatis/主题_MyBatis源码架构_综述.md`：新增第三轮深挖结论，移除 ResultSetHandler TODO，并更新后续路线。
+- `10-domains/java/mybatis/概念_MyBatis执行器缓存与插件链.md`：补充到 ResultSetHandler 深挖页的链接。
+- `10-domains/java/mybatis/概念_MyBatis_XML语句解析与MappedStatement构建.md`：补充 `ResultMap/ResultMapping` 与结果映射阶段的关系。
 - `index.md`：新增第三轮 concept 和图表入口。
 - `log.md`（本次记录）
 
@@ -185,13 +185,13 @@
 ## [2026-05-13] update | MyBatis 第二轮深挖：XML SQL 编译为 MappedStatement
 
 ### created
-- `concepts/java/mybatis/概念_MyBatis_XML语句解析与MappedStatement构建.md`：深挖 `XMLMapperBuilder -> XMLStatementBuilder -> MapperBuilderAssistant -> MappedStatement.Builder`，解释 namespace、sql/include、databaseId、selectKey、SqlSource、resultMap/parameterMap、cache 和最终 `MappedStatement` 构建。
+- `10-domains/java/mybatis/概念_MyBatis_XML语句解析与MappedStatement构建.md`：深挖 `XMLMapperBuilder -> XMLStatementBuilder -> MapperBuilderAssistant -> MappedStatement.Builder`，解释 namespace、sql/include、databaseId、selectKey、SqlSource、resultMap/parameterMap、cache 和最终 `MappedStatement` 构建。
 - `Attachments/mybatis-mappedstatement-build-flow.excalidraw`：MyBatis XML SQL 到 `MappedStatement` 的详细构建流程图。
 
 ### updated
-- `sources/java/mybatis/来源_MyBatis_3_源码.md`：新增 XML SQL 编译链路与源码入口。
-- `overview/java/mybatis/主题_MyBatis源码架构_综述.md`：新增第二轮深挖结论，移除 XML mapper 构建 TODO，并更新后续路线。
-- `concepts/java/mybatis/概念_MyBatis_Mapper代理与MappedStatement.md`：补充到 XML 编译页的关系链接。
+- `30-sources/repositories/来源_MyBatis_3_源码.md`：新增 XML SQL 编译链路与源码入口。
+- `10-domains/java/mybatis/主题_MyBatis源码架构_综述.md`：新增第二轮深挖结论，移除 XML mapper 构建 TODO，并更新后续路线。
+- `10-domains/java/mybatis/概念_MyBatis_Mapper代理与MappedStatement.md`：补充到 XML 编译页的关系链接。
 - `index.md`：新增第二轮 concept 和图表入口。
 - `log.md`（本次记录）
 
@@ -200,17 +200,17 @@
 ## [2026-05-13] update | Spring Framework 第四轮深度学习：复杂源码链路专题
 
 ### created
-- `concepts/java/spring-framework/概念_MergedAnnotations合并注解模型.md`：源码级整理 `MergedAnnotations`、`AnnotationTypeMapping`、`@AliasFor`、mirror set 与组合注解。
-- `concepts/java/spring-framework/概念_ConfigurationClassParser配置类解析细节.md`：拆 `@ComponentScan`、普通 `@Import`、`DeferredImportSelector` 的解析顺序。
-- `concepts/java/spring-framework/概念_Spring_WebFlux响应式处理链.md`：整理 `DispatcherHandler`、`HandlerResultHandler`、异常恢复和 Reactor Context。
-- `concepts/java/spring-framework/概念_Spring_TestContext缓存与事务测试.md`：拆 `MergedContextConfiguration` cache key、listener 顺序、事务测试、MockMvc/WebTestClient。
-- `concepts/java/spring-framework/概念_Spring_AOP责任链源码时序.md`：整理 advisor chain、`ReflectiveMethodInvocation.proceed()`、`TransactionInterceptor` 事务时序。
+- `10-domains/java/spring-framework/概念_MergedAnnotations合并注解模型.md`：源码级整理 `MergedAnnotations`、`AnnotationTypeMapping`、`@AliasFor`、mirror set 与组合注解。
+- `10-domains/java/spring-framework/概念_ConfigurationClassParser配置类解析细节.md`：拆 `@ComponentScan`、普通 `@Import`、`DeferredImportSelector` 的解析顺序。
+- `10-domains/java/spring-framework/概念_Spring_WebFlux响应式处理链.md`：整理 `DispatcherHandler`、`HandlerResultHandler`、异常恢复和 Reactor Context。
+- `10-domains/java/spring-framework/概念_Spring_TestContext缓存与事务测试.md`：拆 `MergedContextConfiguration` cache key、listener 顺序、事务测试、MockMvc/WebTestClient。
+- `10-domains/java/spring-framework/概念_Spring_AOP责任链源码时序.md`：整理 advisor chain、`ReflectiveMethodInvocation.proceed()`、`TransactionInterceptor` 事务时序。
 - `Attachments/spring-configuration-class-parser-flow.excalidraw`：配置类解析流程图。
 - `Attachments/spring-aop-advisor-chain-sequence.excalidraw`：AOP advisor chain 与事务拦截时序图。
 
 ### updated
-- `sources/java/spring-framework/来源_Spring_Framework_源码.md`：补充第四轮源码入口和对应概念页。
-- `overview/java/spring-framework/主题_Spring_Framework源码学习_综述.md`：新增第四轮结论，更新未解决问题和下一步。
+- `30-sources/repositories/来源_Spring_Framework_源码.md`：补充第四轮源码入口和对应概念页。
+- `10-domains/java/spring-framework/主题_Spring_Framework源码学习_综述.md`：新增第四轮结论，更新未解决问题和下一步。
 - `index.md`：新增 5 个 Spring Framework 源码专题入口和图表引用。
 - `log.md`（本次记录）
 
@@ -219,11 +219,11 @@
 ## [2026-05-12] ingest | raw/code/mybatis-3 → MyBatis 3 源码知识层
 
 ### created
-- `sources/java/mybatis/来源_MyBatis_3_源码.md`：整理 MyBatis 3 源码入口、版本边界、核心设计理念、生命周期、Mapper 代理、执行器、缓存和插件主线。
-- `concepts/java/mybatis/概念_MyBatis核心生命周期与Configuration.md`：编译 Resources、SqlSessionFactoryBuilder、XMLConfigBuilder、Configuration、SqlSessionFactory、SqlSession 生命周期。
-- `concepts/java/mybatis/概念_MyBatis_Mapper代理与MappedStatement.md`：整理 MapperRegistry、MapperProxyFactory、MapperProxy、MapperMethod、MappedStatement 的绑定关系。
-- `concepts/java/mybatis/概念_MyBatis执行器缓存与插件链.md`：整理 Executor 类型、一级缓存、二级缓存、四大 handler、InterceptorChain 插件机制。
-- `overview/java/mybatis/主题_MyBatis源码架构_综述.md`：形成 MyBatis 源码架构综述与后续深挖路线。
+- `30-sources/repositories/来源_MyBatis_3_源码.md`：整理 MyBatis 3 源码入口、版本边界、核心设计理念、生命周期、Mapper 代理、执行器、缓存和插件主线。
+- `10-domains/java/mybatis/概念_MyBatis核心生命周期与Configuration.md`：编译 Resources、SqlSessionFactoryBuilder、XMLConfigBuilder、Configuration、SqlSessionFactory、SqlSession 生命周期。
+- `10-domains/java/mybatis/概念_MyBatis_Mapper代理与MappedStatement.md`：整理 MapperRegistry、MapperProxyFactory、MapperProxy、MapperMethod、MappedStatement 的绑定关系。
+- `10-domains/java/mybatis/概念_MyBatis执行器缓存与插件链.md`：整理 Executor 类型、一级缓存、二级缓存、四大 handler、InterceptorChain 插件机制。
+- `10-domains/java/mybatis/主题_MyBatis源码架构_综述.md`：形成 MyBatis 源码架构综述与后续深挖路线。
 - `Attachments/mybatis-source-architecture.excalidraw`：MyBatis 3 源码架构图。
 - `Attachments/mybatis-execution-flow.excalidraw`：Mapper 调用与 SQL 执行流程图。
 
@@ -239,14 +239,14 @@
 ## [2026-05-12] create | Spring 0-6 知识体系大纲：根基、核心容器、AOP、数据访问、Web、Boot、扩展
 
 ### created
-- `overview/java/spring/主题_Spring知识体系_综述.md`
-- `concepts/java/spring/概念_Spring根基_IoC_DI_Bean生命周期_资源属性.md`
-- `concepts/java/spring/概念_Spring核心容器_BeanFactory_依赖注入_自动装配_循环依赖.md`
-- `concepts/java/spring/概念_Spring_AOP模块_动态代理_通知_切点_事务代理.md`
-- `concepts/java/spring/概念_Spring数据访问_JdbcTemplate_事务传播_MyBatis_多数据源.md`
-- `concepts/java/spring/概念_Spring_Web层_DispatcherServlet_HandlerMapping_参数返回值_过滤器拦截器.md`
-- `concepts/java/spring/概念_Spring_Boot内核_自动配置_条件注解_启动过程_Starter.md`
-- `concepts/java/spring/概念_Spring扩展进阶_事件_FactoryBean_后置处理器_SPI.md`
+- `10-domains/java/spring/主题_Spring知识体系_综述.md`
+- `10-domains/java/spring/概念_Spring根基_IoC_DI_Bean生命周期_资源属性.md`
+- `10-domains/java/spring/概念_Spring核心容器_BeanFactory_依赖注入_自动装配_循环依赖.md`
+- `10-domains/java/spring/概念_Spring_AOP模块_动态代理_通知_切点_事务代理.md`
+- `10-domains/java/spring/概念_Spring数据访问_JdbcTemplate_事务传播_MyBatis_多数据源.md`
+- `10-domains/java/spring/概念_Spring_Web层_DispatcherServlet_HandlerMapping_参数返回值_过滤器拦截器.md`
+- `10-domains/java/spring/概念_Spring_Boot内核_自动配置_条件注解_启动过程_Starter.md`
+- `10-domains/java/spring/概念_Spring扩展进阶_事件_FactoryBean_后置处理器_SPI.md`
 - `Attachments/spring-knowledge-outline.excalidraw`
 - `Attachments/spring-runtime-core-flows.excalidraw`
 
@@ -262,12 +262,12 @@
 ## [2026-05-12] update | Spring AI 第三轮学习：设计模式整理
 
 ### created
-- `concepts/java/spring-ai/概念_Spring_AI_设计模式.md`：系统整理 Spring AI 使用到的 Builder/Fluent Interface、Facade、责任链、模板方法、策略、适配器、AutoConfiguration 工厂、Repository、Observation、Prototype、Command 等模式，并解释为什么这样设计及工程收益。
+- `10-domains/java/spring-ai/概念_Spring_AI_设计模式.md`：系统整理 Spring AI 使用到的 Builder/Fluent Interface、Facade、责任链、模板方法、策略、适配器、AutoConfiguration 工厂、Repository、Observation、Prototype、Command 等模式，并解释为什么这样设计及工程收益。
 - `Attachments/spring-ai-design-patterns.svg`：Spring AI 设计模式地图，可直接在 Obsidian 页面中展示。
 
 ### updated
 - `index.md`：新增 Spring AI 设计模式概念索引。
-- `sources/java/spring-ai/Spring_AI_源码.md`、`overview/java/spring-ai/主题_Spring_AI源码架构_综述.md`：补充到设计模式页的反向链接。
+- `30-sources/repositories/Spring_AI_源码.md`、`10-domains/java/spring-ai/主题_Spring_AI源码架构_综述.md`：补充到设计模式页的反向链接。
 - `log.md`：记录本轮更新。
 
 ---
@@ -289,16 +289,16 @@
 ## [2026-05-12] update | Spring Framework 第三轮深度学习：设计模式专题
 
 ### created
-- `overview/java/spring-framework/主题_Spring_Framework设计模式_综述.md`
-- `concepts/java/spring-framework/概念_Spring_Framework_创建型设计模式.md`
-- `concepts/java/spring-framework/概念_Spring_Framework_结构型设计模式.md`
-- `concepts/java/spring-framework/概念_Spring_Framework_行为型设计模式.md`
-- `concepts/java/spring-framework/概念_Spring_Framework_面试高频设计模式问答.md`
+- `10-domains/java/spring-framework/主题_Spring_Framework设计模式_综述.md`
+- `10-domains/java/spring-framework/概念_Spring_Framework_创建型设计模式.md`
+- `10-domains/java/spring-framework/概念_Spring_Framework_结构型设计模式.md`
+- `10-domains/java/spring-framework/概念_Spring_Framework_行为型设计模式.md`
+- `10-domains/java/spring-framework/概念_Spring_Framework_面试高频设计模式问答.md`
 - `Attachments/spring-framework-design-patterns-map.excalidraw`
 
 ### updated
-- `sources/java/spring-framework/来源_Spring_Framework_源码.md`：补充设计模式专题入口和源码锚点。
-- `overview/java/spring-framework/主题_Spring_Framework源码学习_综述.md`：新增第三轮设计模式结论。
+- `30-sources/repositories/来源_Spring_Framework_源码.md`：补充设计模式专题入口和源码锚点。
+- `10-domains/java/spring-framework/主题_Spring_Framework源码学习_综述.md`：新增第三轮设计模式结论。
 - `index.md`：新增 Spring Framework 设计模式专题索引。
 - `log.md`（本次记录）
 
@@ -307,36 +307,36 @@
 ## [2026-05-12] update | Spring Framework 第二轮深度学习：Core + 配置/依赖解析 + 数据访问 + Web/Test/Messaging
 
 ### created
-- `concepts/java/spring-framework/概念_Spring_Core资源类型注解与转换底座.md`
-- `concepts/java/spring-framework/概念_Spring_Framework_配置类解析与依赖解析.md`
-- `concepts/java/spring-framework/概念_Spring_Framework_数据访问事务同步与集成模块.md`
-- `concepts/java/spring-framework/概念_Spring_Framework_Web测试消息与应用层扩展.md`
+- `10-domains/java/spring-framework/概念_Spring_Core资源类型注解与转换底座.md`
+- `10-domains/java/spring-framework/概念_Spring_Framework_配置类解析与依赖解析.md`
+- `10-domains/java/spring-framework/概念_Spring_Framework_数据访问事务同步与集成模块.md`
+- `10-domains/java/spring-framework/概念_Spring_Framework_Web测试消息与应用层扩展.md`
 - `Attachments/spring-framework-second-round-map.excalidraw`
 
 ### updated
-- `sources/java/spring-framework/来源_Spring_Framework_源码.md`：补充第二轮关键源码入口与核心观点。
-- `overview/java/spring-framework/主题_Spring_Framework源码学习_综述.md`：更新为两轮学习地图与后续深挖路线。
+- `30-sources/repositories/来源_Spring_Framework_源码.md`：补充第二轮关键源码入口与核心观点。
+- `10-domains/java/spring-framework/主题_Spring_Framework源码学习_综述.md`：更新为两轮学习地图与后续深挖路线。
 - `index.md`：新增 Spring Framework 第二轮概念页与图表引用。
 - `log.md`（本次记录）
 
 ---
 
-## [2026-05-12] ingest | raw/code/spring-framework → wiki/sources/java/spring-framework/来源_Spring_Framework_源码.md
+## [2026-05-12] ingest | raw/code/spring-framework → wiki/30-sources/repositories/来源_Spring_Framework_源码.md
 
-## [2026-05-12] create | wiki/concepts/java/spring-framework/概念_Spring_Framework_模块体系与扩展点.md
+## [2026-05-12] create | wiki/10-domains/java/spring-framework/概念_Spring_Framework_模块体系与扩展点.md
 
-## [2026-05-12] create | wiki/concepts/java/spring-framework/概念_Spring_Framework_IoC容器启动与Bean生命周期.md
+## [2026-05-12] create | wiki/10-domains/java/spring-framework/概念_Spring_Framework_IoC容器启动与Bean生命周期.md
 
-## [2026-05-12] create | wiki/concepts/java/spring-framework/概念_Spring_Framework_AOP事务与Web分发.md
+## [2026-05-12] create | wiki/10-domains/java/spring-framework/概念_Spring_Framework_AOP事务与Web分发.md
 
-## [2026-05-12] create | wiki/overview/java/spring-framework/主题_Spring_Framework源码学习_综述.md + Attachments/spring-framework-source-flow.excalidraw
+## [2026-05-12] create | wiki/10-domains/java/spring-framework/主题_Spring_Framework源码学习_综述.md + Attachments/spring-framework-source-flow.excalidraw
 
 ---
 
 ## [2026-05-12] update | Spring AI 源码级深化：调用链 + 5 张 Excalidraw 架构/流程图
 
 ### created
-- `overview/java/spring-ai/主题_Spring_AI源码架构_综述.md`：新增源码级主线综述，串联 AutoConfiguration、ChatClient、Advisor、Tool Calling、RAG、VectorStore、MCP。
+- `10-domains/java/spring-ai/主题_Spring_AI源码架构_综述.md`：新增源码级主线综述，串联 AutoConfiguration、ChatClient、Advisor、Tool Calling、RAG、VectorStore、MCP。
 - `Attachments/spring-ai-source-architecture.excalidraw`：Spring AI 源码分层架构图。
 - `Attachments/spring-ai-chatclient-call-flow.excalidraw`：ChatClient call/stream 执行流图。
 - `Attachments/spring-ai-tool-calling-loop.excalidraw`：ToolCallAdvisor ReAct 循环图。
@@ -344,13 +344,13 @@
 - `Attachments/spring-ai-autoconfiguration-chain.excalidraw`：Starter 到 AutoConfiguration 到 Bean 的装配链图。
 
 ### updated
-- `concepts/java/spring-ai/概念_Spring_AI_架构设计.md`：补充源码级阅读路径、DefaultChatClient/RequestSpec/终端 Advisor 机制和架构图。
-- `concepts/java/spring-ai/概念_Spring_AI_ChatClient_API.md`：补充 call/stream 源码执行链、Observation、entity() 上下文写入和扩展点。
-- `concepts/java/spring-ai/概念_Spring_AI_Advisor拦截链.md`：补充 DefaultAroundAdvisorChain 的 Deque.pop、OrderComparator、copy(after)、流式聚合等源码细节。
-- `concepts/java/spring-ai/概念_Spring_AI_ToolCalling工具调用.md`：补充 ToolCallAdvisor 接管路径、chain.copy(this)、DefaultToolCallingManager 和 MethodToolCallback 反射细节。
-- `concepts/java/spring-ai/概念_Spring_AI_RAG检索增强生成.md`：补充 RetrievalAugmentationAdvisor before/after 源码步骤、默认并发线程池和调优点。
-- `concepts/java/spring-ai/概念_Spring_AI_AutoConfiguration自动配置.md`：补充 Bean 依赖图式阅读方式和覆盖点。
-- `sources/java/spring-ai/Spring_AI_源码.md`：补充源码阅读路线和图表入口。
+- `10-domains/java/spring-ai/概念_Spring_AI_架构设计.md`：补充源码级阅读路径、DefaultChatClient/RequestSpec/终端 Advisor 机制和架构图。
+- `10-domains/java/spring-ai/概念_Spring_AI_ChatClient_API.md`：补充 call/stream 源码执行链、Observation、entity() 上下文写入和扩展点。
+- `10-domains/java/spring-ai/概念_Spring_AI_Advisor拦截链.md`：补充 DefaultAroundAdvisorChain 的 Deque.pop、OrderComparator、copy(after)、流式聚合等源码细节。
+- `10-domains/java/spring-ai/概念_Spring_AI_ToolCalling工具调用.md`：补充 ToolCallAdvisor 接管路径、chain.copy(this)、DefaultToolCallingManager 和 MethodToolCallback 反射细节。
+- `10-domains/java/spring-ai/概念_Spring_AI_RAG检索增强生成.md`：补充 RetrievalAugmentationAdvisor before/after 源码步骤、默认并发线程池和调优点。
+- `10-domains/java/spring-ai/概念_Spring_AI_AutoConfiguration自动配置.md`：补充 Bean 依赖图式阅读方式和覆盖点。
+- `30-sources/repositories/Spring_AI_源码.md`：补充源码阅读路线和图表入口。
 - `index.md`：新增 Spring AI 源码架构综述索引。
 
 ---
@@ -362,13 +362,13 @@
 - 同 area 当前只有 1 source + 1 entity + 7 concept，未发现存活重复页；历史日志中的旧 `整体架构` / `DashScope集成` 等页面已不在 wiki 中，本次未恢复重复内容。
 
 ### created
-- `concepts/java/spring-ai/概念_Spring_AI_VectorStore向量存储.md`：补充 VectorStore 接口、SearchRequest、Filter.Expression、Observation 模板方法。
-- `concepts/java/spring-ai/概念_Spring_AI_AutoConfiguration自动配置.md`：补充 Starter 依赖组合、模型/ChatClient/VectorStore 自动配置机制。
-- `concepts/java/spring-ai/概念_Spring_AI_MCP集成.md`：补充 MCP Client/Server、ToolCallbackProvider、McpToolUtils 双向桥接。
+- `10-domains/java/spring-ai/概念_Spring_AI_VectorStore向量存储.md`：补充 VectorStore 接口、SearchRequest、Filter.Expression、Observation 模板方法。
+- `10-domains/java/spring-ai/概念_Spring_AI_AutoConfiguration自动配置.md`：补充 Starter 依赖组合、模型/ChatClient/VectorStore 自动配置机制。
+- `10-domains/java/spring-ai/概念_Spring_AI_MCP集成.md`：补充 MCP Client/Server、ToolCallbackProvider、McpToolUtils 双向桥接。
 
 ### updated
-- `sources/java/spring-ai/Spring_AI_源码.md`：补充 3 个缺失核心观点和相关链接。
-- `entities/java/spring-ai/项目_Spring_AI.md`：补充 VectorStore / AutoConfiguration / MCP 关联。
+- `30-sources/repositories/Spring_AI_源码.md`：补充 3 个缺失核心观点和相关链接。
+- `10-domains/java/spring-ai/项目_Spring_AI.md`：补充 VectorStore / AutoConfiguration / MCP 关联。
 - `index.md`：Spring AI 域新增 3 个概念索引。
 
 ---
@@ -376,15 +376,15 @@
 ## [2026-05-10] ingest | Spring AI 完整源码重入库：1 source + 7 concepts + 1 entity
 
 ### created
-- `sources/java/spring-ai/Spring_AI_源码.md`：10 核心观点 + 14 概念表 + 5 未解决问题
-- `concepts/java/spring-ai/概念_Spring_AI_架构设计.md`：Generic Model + ChatModel + Advisor 链 + 多厂商原理
-- `concepts/java/spring-ai/概念_Spring_AI_ChatClient_API.md`：Builder/RequestSpec/CallResponseSpec/StreamResponseSpec 接口级分析
-- `concepts/java/spring-ai/概念_Spring_AI_Advisor拦截链.md`：BaseAdvisor 模板方法 + 12 内置 Advisor + 链式流程
-- `concepts/java/spring-ai/概念_Spring_AI_ToolCalling工具调用.md`：@Tool → ToolCallAdvisor ReAct 循环全链路
-- `concepts/java/spring-ai/概念_Spring_AI_RAG检索增强生成.md`：7 步 Modular RAG 流水线源码级分析
-- `concepts/java/spring-ai/概念_Spring_AI_ChatMemory对话记忆.md`：滑动窗口 + SystemMessage 保护 + 6 后端
-- `concepts/java/spring-ai/概念_Spring_AI_StructuredOutput结构化输出.md`：JSON Schema 自动生成 + BeanOutputConverter
-- `entities/java/spring-ai/项目_Spring_AI.md`：项目实体页
+- `30-sources/repositories/Spring_AI_源码.md`：10 核心观点 + 14 概念表 + 5 未解决问题
+- `10-domains/java/spring-ai/概念_Spring_AI_架构设计.md`：Generic Model + ChatModel + Advisor 链 + 多厂商原理
+- `10-domains/java/spring-ai/概念_Spring_AI_ChatClient_API.md`：Builder/RequestSpec/CallResponseSpec/StreamResponseSpec 接口级分析
+- `10-domains/java/spring-ai/概念_Spring_AI_Advisor拦截链.md`：BaseAdvisor 模板方法 + 12 内置 Advisor + 链式流程
+- `10-domains/java/spring-ai/概念_Spring_AI_ToolCalling工具调用.md`：@Tool → ToolCallAdvisor ReAct 循环全链路
+- `10-domains/java/spring-ai/概念_Spring_AI_RAG检索增强生成.md`：7 步 Modular RAG 流水线源码级分析
+- `10-domains/java/spring-ai/概念_Spring_AI_ChatMemory对话记忆.md`：滑动窗口 + SystemMessage 保护 + 6 后端
+- `10-domains/java/spring-ai/概念_Spring_AI_StructuredOutput结构化输出.md`：JSON Schema 自动生成 + BeanOutputConverter
+- `10-domains/java/spring-ai/项目_Spring_AI.md`：项目实体页
 
 ### updated
 - `index.md`（新增 Java / Spring AI 域，7 个概念 + 1 个实体 + 1 个来源）
@@ -395,9 +395,9 @@
 ## [2026-05-10] delete | 清理 Spring AI 全量内容（sources/concepts/entities + index）
 
 用户确认 Spring AI 非必要知识域，删除：
-- `sources/java/spring-ai/`（1 页）
-- `concepts/java/spring-ai/`（7 页）
-- `entities/java/spring-ai/`（2 页）
+- `30-sources/repositories/`（1 页）
+- `10-domains/java/spring-ai/`（7 页）
+- `10-domains/java/spring-ai/`（2 页）
 - index.md 中 Spring AI 相关条目
 
 ---
@@ -405,9 +405,9 @@
 ## [2026-05-10] update | Spring AI 续更：ChatMemory + StructuredOutput + ToolCalling 3 新页
 
 ### created
-- `concepts/java/spring-ai/概念_Spring_AI_ChatMemory对话记忆.md`：ChatMemory/ChatMemoryRepository 接口、MessageWindowChatMemory 滑动窗口、JDBC 持久化、MessageChatMemoryAdvisor 集成
-- `concepts/java/spring-ai/概念_Spring_AI_StructuredOutput结构化输出.md`：BeanOutputConverter/listOutputConverter/MapOutputConverter 源码、JsonSchema 自动生成、entity() API 完整流程
-- `concepts/java/spring-ai/概念_Spring_AI_ToolCalling工具调用.md`：@Tool/@ToolParam 注解、MethodToolCallback 反射执行、ToolCallAdvisor 编排循环、ToolCallingManager
+- `10-domains/java/spring-ai/概念_Spring_AI_ChatMemory对话记忆.md`：ChatMemory/ChatMemoryRepository 接口、MessageWindowChatMemory 滑动窗口、JDBC 持久化、MessageChatMemoryAdvisor 集成
+- `10-domains/java/spring-ai/概念_Spring_AI_StructuredOutput结构化输出.md`：BeanOutputConverter/listOutputConverter/MapOutputConverter 源码、JsonSchema 自动生成、entity() API 完整流程
+- `10-domains/java/spring-ai/概念_Spring_AI_ToolCalling工具调用.md`：@Tool/@ToolParam 注解、MethodToolCallback 反射执行、ToolCallAdvisor 编排循环、ToolCallingManager
 
 ### updated
 - `index.md`（Spring AI 域扩展为 7 个概念页）
@@ -418,12 +418,12 @@
 ## [2026-05-10] update | Spring AI 深度重写：反编译源码级架构分析 + 4 页全面重写/新增
 
 ### updated（4 页基于反编译 jar 深度重写）
-- `concepts/java/spring-ai/概念_Spring_AI_ChatClient_API.md`：新增 ChatClient/Builder/RequestSpec/CallResponseSpec/StreamResponseSpec 接口级源码、DefaultChatClient 实现分析、完整数据流图
-- `concepts/java/spring-ai/概念_Spring_AI_Alibaba_DashScope集成.md`：新增 DashScopeChatAutoConfiguration 源码级 Bean 创建链、DashScopeChatModel 构造器分析、DashScopeApi REST 层、DashScopeChatOptions 40+ 参数全表
+- `10-domains/java/spring-ai/概念_Spring_AI_ChatClient_API.md`：新增 ChatClient/Builder/RequestSpec/CallResponseSpec/StreamResponseSpec 接口级源码、DefaultChatClient 实现分析、完整数据流图
+- `10-domains/java/spring-ai/概念_Spring_AI_Alibaba_DashScope集成.md`：新增 DashScopeChatAutoConfiguration 源码级 Bean 创建链、DashScopeChatModel 构造器分析、DashScopeApi REST 层、DashScopeChatOptions 40+ 参数全表
 
 ### created（2 个新概念页）
-- `concepts/java/spring-ai/概念_Spring_AI_整体架构.md`：四层架构图、ChatModel 接口、Auto-Configuration 启动链、多厂商可移植性设计
-- `concepts/java/spring-ai/概念_Spring_AI_Advisor拦截链.md`：CallAdvisor/StreamAdvisor 接口、DefaultAroundAdvisorChain 链式调用、8 内置 Advisor 清单、自定义 BillingAdvisor 示例
+- `10-domains/java/spring-ai/概念_Spring_AI_整体架构.md`：四层架构图、ChatModel 接口、Auto-Configuration 启动链、多厂商可移植性设计
+- `10-domains/java/spring-ai/概念_Spring_AI_Advisor拦截链.md`：CallAdvisor/StreamAdvisor 接口、DefaultAroundAdvisorChain 链式调用、8 内置 Advisor 清单、自定义 BillingAdvisor 示例
 
 ### updated
 - `index.md`（Spring AI 域扩展为 4 个概念页）
@@ -431,14 +431,14 @@
 
 ---
 
-## [2026-04-29] ingest | raw/AI/SpringAI → wiki/sources/java/spring-ai/SpringAI示例项目.md (+ 2 concepts + 2 entities + index + log)
+## [2026-04-29] ingest | raw/AI/SpringAI → wiki/30-sources/repositories/SpringAI示例项目.md (+ 2 concepts + 2 entities + index + log)
 
 ### created
-- `sources/java/spring-ai/SpringAI示例项目.md`
-- `concepts/java/spring-ai/概念_Spring_AI_ChatClient_API.md`
-- `concepts/java/spring-ai/概念_Spring_AI_Alibaba_DashScope集成.md`
-- `entities/java/spring-ai/项目_Spring_AI.md`
-- `entities/java/spring-ai/项目_Spring_AI_Alibaba.md`
+- `30-sources/repositories/SpringAI示例项目.md`
+- `10-domains/java/spring-ai/概念_Spring_AI_ChatClient_API.md`
+- `10-domains/java/spring-ai/概念_Spring_AI_Alibaba_DashScope集成.md`
+- `10-domains/java/spring-ai/项目_Spring_AI.md`
+- `10-domains/java/spring-ai/项目_Spring_AI_Alibaba.md`
 
 ### updated
 - `index.md`（新增 Java / Spring AI 域）
@@ -496,18 +496,18 @@
 
 ---
 
-## [2026-04-28] ingest | raw/AI/hello-agents → wiki/sources/agent/Hello-Agents教程.md
+## [2026-04-28] ingest | raw/AI/hello-agents → wiki/30-sources/courses/Hello-Agents教程.md
 
 ### created
-- `sources/agent/Hello-Agents教程.md`
-- `concepts/agent/概念_Agent_Loop.md`
-- `concepts/agent/概念_ReAct范式.md`
-- `concepts/agent/概念_Plan-and-Solve范式.md`
-- `concepts/agent/概念_Reflection范式.md`
-- `concepts/agent/概念_PEAS模型.md`
-- `concepts/agent/概念_多智能体协作.md`
-- `entities/agent/项目_HelloAgents.md`
-- `entities/agent/人物_陈思州.md`
+- `30-sources/courses/Hello-Agents教程.md`
+- `10-domains/ai/agent/概念_Agent_Loop.md`
+- `10-domains/ai/agent/概念_ReAct范式.md`
+- `10-domains/ai/agent/概念_Plan-and-Solve范式.md`
+- `10-domains/ai/agent/概念_Reflection范式.md`
+- `10-domains/ai/agent/概念_PEAS模型.md`
+- `10-domains/ai/agent/概念_多智能体协作.md`
+- `10-domains/ai/agent/项目_HelloAgents.md`
+- `10-domains/ai/agent/人物_陈思州.md`
 
 ### updated
 - `index.md`（新增 AI / Agent 域）
@@ -532,24 +532,24 @@
 
 ### updated
 6 个现有概念页补充完整 Python 代码实现：
-- `concepts/agent/概念_Agent_Loop.md`：补充 OpenAICompatibleClient + 主循环 + 工具定义完整代码
-- `concepts/agent/概念_ReAct范式.md`：补充 HelloAgentsLLM + ToolExecutor + ReActAgent 完整实现
-- `concepts/agent/概念_Plan-and-Solve范式.md`：补充 Planner + Executor + PlanAndSolveAgent 完整实现
-- `concepts/agent/概念_Reflection范式.md`：补充 Memory + ReflectionAgent + 三个提示词模板完整实现
-- `concepts/agent/概念_PEAS模型.md`：补充旅行助手 PEAS 实例 + 工具代码映射
-- `concepts/agent/概念_多智能体协作.md`：补充赛博小镇 SimpleAgent/NPCBatchGenerator/混合模式完整代码
+- `10-domains/ai/agent/概念_Agent_Loop.md`：补充 OpenAICompatibleClient + 主循环 + 工具定义完整代码
+- `10-domains/ai/agent/概念_ReAct范式.md`：补充 HelloAgentsLLM + ToolExecutor + ReActAgent 完整实现
+- `10-domains/ai/agent/概念_Plan-and-Solve范式.md`：补充 Planner + Executor + PlanAndSolveAgent 完整实现
+- `10-domains/ai/agent/概念_Reflection范式.md`：补充 Memory + ReflectionAgent + 三个提示词模板完整实现
+- `10-domains/ai/agent/概念_PEAS模型.md`：补充旅行助手 PEAS 实例 + 工具代码映射
+- `10-domains/ai/agent/概念_多智能体协作.md`：补充赛博小镇 SimpleAgent/NPCBatchGenerator/混合模式完整代码
 
 ### created
 6 个新概念页：
-- `concepts/agent/概念_ELIZA.md`：1966 首个对话系统，正则规则库 + 代词转换
-- `concepts/agent/概念_Transformer架构.md`：MultiHeadAttention / PositionalEncoding / Encoder/Decoder 完整实现
-- `concepts/agent/概念_BPE分词算法.md`：字节对编码算法完整实现与迭代过程
-- `concepts/agent/概念_提示工程.md`：Zero/Few-shot、CoT、角色扮演、采样参数
-- `concepts/agent/概念_记忆系统.md`：四层记忆 + RAGTool/MQE/HyDE + 评分公式
-- `concepts/agent/概念_上下文工程.md`：GSSC 流程（Gather→Select→Structure→Compress）
+- `10-domains/ai/agent/概念_ELIZA.md`：1966 首个对话系统，正则规则库 + 代词转换
+- `10-domains/ai/agent/概念_Transformer架构.md`：MultiHeadAttention / PositionalEncoding / Encoder/Decoder 完整实现
+- `10-domains/ai/agent/概念_BPE分词算法.md`：字节对编码算法完整实现与迭代过程
+- `10-domains/ai/agent/概念_提示工程.md`：Zero/Few-shot、CoT、角色扮演、采样参数
+- `10-domains/ai/agent/概念_记忆系统.md`：四层记忆 + RAGTool/MQE/HyDE + 评分公式
+- `10-domains/ai/agent/概念_上下文工程.md`：GSSC 流程（Gather→Select→Structure→Compress）
 
 ### updated
-- `sources/agent/Hello-Agents教程.md`：更新为完整章节摘要 + 12 个概念链接
+- `30-sources/courses/Hello-Agents教程.md`：更新为完整章节摘要 + 12 个概念链接
 - `index.md`：Agent 域重新组织为三组（核心范式 / LLM 基础 / 系统工程）
 - `log.md`（本次记录）
 
@@ -559,9 +559,9 @@
 
 ### updated
 3 个概念页补充生产级 Java 代码示例：
-- `concepts/java/jvm/概念_JVM内存区域.md`：新增 StackOverflowError / Heap OOM / Metaspace OOM / Direct Memory OOM 触发代码，JOL 对象布局解析，TLAB 分配演示，jmap/jstat/jcmd 工具速查
-- `concepts/java/jvm/概念_垃圾收集算法.md`：新增四种引用完整演示、GC Roots 枚举代码、finalize() 自我救赎、ThreadLocal 内存泄漏复现与修复
-- `concepts/java/jvm/概念_垃圾收集器.md`：新增完整收集器组合参数表、CMS GC 日志逐行注释解析、G1 Young/Mixed/Full GC 日志解析、G1 Humongous 大对象分配、ZGC 调优实践与日志解读
+- `10-domains/java/jvm/概念_JVM内存区域.md`：新增 StackOverflowError / Heap OOM / Metaspace OOM / Direct Memory OOM 触发代码，JOL 对象布局解析，TLAB 分配演示，jmap/jstat/jcmd 工具速查
+- `10-domains/java/jvm/概念_垃圾收集算法.md`：新增四种引用完整演示、GC Roots 枚举代码、finalize() 自我救赎、ThreadLocal 内存泄漏复现与修复
+- `10-domains/java/jvm/概念_垃圾收集器.md`：新增完整收集器组合参数表、CMS GC 日志逐行注释解析、G1 Young/Mixed/Full GC 日志解析、G1 Humongous 大对象分配、ZGC 调优实践与日志解读
 
 ---
 
@@ -570,20 +570,20 @@
 ### updated
 3 个 JVM 概念页在保留原有结构和 frontmatter 基础上，新增大段实际 Java 代码和命令示例：
 
-- `concepts/java/jvm/概念_类加载机制.md`：
+- `10-domains/java/jvm/概念_类加载机制.md`：
   - 静态内部类单例（`<clinit>` 线程安全机制演示）
   - ClassLoader 层级打印代码（AppClassLoader → Bootstrap）
   - 自定义 PathClassLoader（打破双亲委派，从文件系统加载 .class）
   - SPI/线程上下文类加载器 JDBC 演示（ServiceLoader + TCCL）
   - `-verbose:class` 输出与类加载顺序观察命令
 
-- `concepts/java/jvm/概念_Class文件结构.md`：
+- `10-domains/java/jvm/概念_Class文件结构.md`：
   - `xxd` 十六进制转储（cafe babe、major_version 对照表）
   - 方法描述符格式完整对照表（(II)I、(Ljava/lang/String;)V 等）
   - `javap -verbose` 常量池 + Code 属性逐条字节码指令解读
   - ASM 运行时动态生成类完整代码（ClassWriter + MethodVisitor）
 
-- `concepts/java/jvm/概念_字节码执行引擎.md`：
+- `10-domains/java/jvm/概念_字节码执行引擎.md`：
   - 静态分派（重载）完整演示（Human/Man/Woman 类型体系）
   - 动态分派（重写）vtable 演示（Son/Father/Daughter）
   - invokedynamic 双入口（Lambda + MethodHandle 四种句柄：静态/虚/构造/字段）
@@ -606,15 +606,15 @@
 
 ### updated
 - `index.md`（JVM 条目含代码描述 + 图表引用）
-- `sources/java/jvm/深入理解Java虚拟机.md`（新增图表引用）
+- `30-sources/books/深入理解Java虚拟机.md`（新增图表引用）
 - `log.md`（本次记录）
 ## [2026-07-13] deep-learning | mall-swarm mall-demo
 
 ### created
-- `concepts/ecommerce/mall-swarm/概念_mall-swarm_mall-demo设计.md`：定位、模块/运行时依赖、Feign 调用关系图、六项服务契约表、购物车调用时序、认证/TraceId/异常/可靠性边界，以及 AI 编排调用规范建议。
+- `20-projects/mall-swarm/architecture/概念_mall-swarm_mall-demo设计.md`：定位、模块/运行时依赖、Feign 调用关系图、六项服务契约表、购物车调用时序、认证/TraceId/异常/可靠性边界，以及 AI 编排调用规范建议。
 
 ### updated
-- `overview/ecommerce/mall-swarm/主题_mall-swarm_架构全景_综述.md`（补充 mall-demo 的教学定位、调用治理缺口与 AI 二开边界）
+- `20-projects/mall-swarm/architecture/主题_mall-swarm_架构全景_综述.md`（补充 mall-demo 的教学定位、调用治理缺口与 AI 二开边界）
 - `index.md`（新增 mall-demo 概念页索引）
 - `log.md`（本次记录）
 
@@ -624,11 +624,11 @@
 
 ### created
 
-- `concepts/ecommerce/mall-swarm/概念_mall-swarm_mall-portal设计.md`：前台功能地图；会员登录/身份、购物车促销、提交订单与库存/优惠/积分、支付宝回调与 RabbitMQ 延迟取消四条 Mermaid 时序；用户端领域模型、订单状态机、MySQL/Redis/MongoDB/RabbitMQ/Alipay 职责表、AI 客服工具权限矩阵及源码风险/待验证项。
+- `20-projects/mall-swarm/architecture/概念_mall-swarm_mall-portal设计.md`：前台功能地图；会员登录/身份、购物车促销、提交订单与库存/优惠/积分、支付宝回调与 RabbitMQ 延迟取消四条 Mermaid 时序；用户端领域模型、订单状态机、MySQL/Redis/MongoDB/RabbitMQ/Alipay 职责表、AI 客服工具权限矩阵及源码风险/待验证项。
 
 ### updated
 
-- `overview/ecommerce/mall-swarm/主题_mall-swarm_架构全景_综述.md`（补充 portal 本地订单事实链、存储职责与高优先级一致性/授权风险）
+- `20-projects/mall-swarm/architecture/主题_mall-swarm_架构全景_综述.md`（补充 portal 本地订单事实链、存储职责与高优先级一致性/授权风险）
 - `index.md`（新增 mall-portal 概念页索引）
 - `log.md`（本次记录）
 
@@ -637,12 +637,12 @@
 
 ### created
 
-- `concepts/ecommerce/mall-swarm/概念_mall-swarm_订单支付一致性.md`：逐项复核订单事务代理、下单/库存并发、RabbitMQ 延迟取消、支付宝发起/回调、前后台状态约束、补偿与测试；严格区分代码事实、运行时事实和 AI 二开建议，并标注 A/B/C 证据等级。
+- `20-projects/mall-swarm/architecture/概念_mall-swarm_订单支付一致性.md`：逐项复核订单事务代理、下单/库存并发、RabbitMQ 延迟取消、支付宝发起/回调、前后台状态约束、补偿与测试；严格区分代码事实、运行时事实和 AI 二开建议，并标注 A/B/C 证据等级。
 
 ### updated
 
-- `concepts/ecommerce/mall-swarm/概念_mall-swarm_mall-portal设计.md`（修正“订单方法没有事务”的历史表述，并链接 P0 复核页）
-- `overview/ecommerce/mall-swarm/主题_mall-swarm_架构全景_综述.md`（RabbitMQ/Alipay 调用事实与 P0 风险优先级）
+- `20-projects/mall-swarm/architecture/概念_mall-swarm_mall-portal设计.md`（修正“订单方法没有事务”的历史表述，并链接 P0 复核页）
+- `20-projects/mall-swarm/architecture/主题_mall-swarm_架构全景_综述.md`（RabbitMQ/Alipay 调用事实与 P0 风险优先级）
 - `index.md`、`log.md`（本次记录）
 
 ### verification note
@@ -655,14 +655,14 @@
 
 ### created
 
-- `concepts/ecommerce/mall-swarm/概念_mall-swarm_认证网关与部署安全.md`：汇总 Gateway 过滤顺序和白名单、Docker/Kubernetes/Nacos 可达性、双 Sa-Token/JWT/Redis session、下游身份验证缺口、Actuator/OpenAPI/ES/回调/Monitor 面、Feign Header 风险，以及 AI 用户委托、服务身份、tool scope、二次确认、审计和拒绝策略。
+- `20-projects/mall-swarm/architecture/概念_mall-swarm_认证网关与部署安全.md`：汇总 Gateway 过滤顺序和白名单、Docker/Kubernetes/Nacos 可达性、双 Sa-Token/JWT/Redis session、下游身份验证缺口、Actuator/OpenAPI/ES/回调/Monitor 面、Feign Header 风险，以及 AI 用户委托、服务身份、tool scope、二次确认、审计和拒绝策略。
 
 ### updated
 
-- `concepts/ecommerce/mall-swarm/概念_mall-swarm_mall-auth设计.md`
-- `concepts/ecommerce/mall-swarm/概念_mall-swarm_mall-gateway设计.md`
-- `concepts/ecommerce/mall-swarm/概念_mall-swarm_mall-monitor设计.md`
-- `overview/ecommerce/mall-swarm/主题_mall-swarm_架构全景_综述.md`
+- `20-projects/mall-swarm/architecture/概念_mall-swarm_mall-auth设计.md`
+- `20-projects/mall-swarm/architecture/概念_mall-swarm_mall-gateway设计.md`
+- `20-projects/mall-swarm/architecture/概念_mall-swarm_mall-monitor设计.md`
+- `20-projects/mall-swarm/architecture/主题_mall-swarm_架构全景_综述.md`
 - `index.md`、`log.md`
 
 ### note
@@ -675,13 +675,13 @@
 
 ### created
 
-- `concepts/ecommerce/mall-swarm/概念_mall-swarm_Nacos配置与运行态验证.md`：记录 Nacos 配置加载模型、服务—Data ID—中间件矩阵、Compose/Kubernetes 对照、静态配置漂移、A/B/C 证据、只读验证命令和 AI 二开部署前置条件。
+- `20-projects/mall-swarm/architecture/概念_mall-swarm_Nacos配置与运行态验证.md`：记录 Nacos 配置加载模型、服务—Data ID—中间件矩阵、Compose/Kubernetes 对照、静态配置漂移、A/B/C 证据、只读验证命令和 AI 二开部署前置条件。
 
 ### updated
 
-- `overview/ecommerce/mall-swarm/主题_mall-swarm_架构全景_综述.md`
-- `concepts/ecommerce/mall-swarm/概念_mall-swarm_认证网关与部署安全.md`
-- `concepts/ecommerce/mall-swarm/概念_mall-swarm_mall-monitor设计.md`
+- `20-projects/mall-swarm/architecture/主题_mall-swarm_架构全景_综述.md`
+- `20-projects/mall-swarm/architecture/概念_mall-swarm_认证网关与部署安全.md`
+- `20-projects/mall-swarm/architecture/概念_mall-swarm_mall-monitor设计.md`
 - `index.md`
 - `log.md`（本次记录）
 
@@ -702,8 +702,8 @@
 
 ## [2026-07-14] create | 数据结构与算法章节基础骨架
 
-- 新建 `overview/java/data-structures-algorithms/主题_数据结构与算法_综述.md`，定义面向 Java 开发者的章节范围、学习框架、目录规划和 Java 实践约定。
-- 新建 `concepts/java/data-structures-algorithms/foundations/概念_算法复杂度分析.md` 与 `概念_数据结构抽象与Java实现.md`，作为后续数据结构和算法专题的共同前提。
+- 新建 `10-domains/java/data-structures-algorithms/主题_数据结构与算法_综述.md`，定义面向 Java 开发者的章节范围、学习框架、目录规划和 Java 实践约定。
+- 新建 `10-domains/java/data-structures-algorithms/foundations/概念_算法复杂度分析.md` 与 `概念_数据结构抽象与Java实现.md`，作为后续数据结构和算法专题的共同前提。
 - 创建线性结构、哈希、树、堆、图、排序、查找、递归与分治、回溯、动态规划、贪心、字符串及题型复盘目录。
 - 更新 `index.md`，添加数据结构与算法章节入口。
 
@@ -717,10 +717,23 @@
 
 ---
 
-## [2026-07-14] ingest | raw/books/大话数据结构.pdf → wiki/sources/data-structures/大话数据结构/
+## [2026-07-14] ingest | raw/books/大话数据结构.pdf → wiki/30-sources/books/大话数据结构/
 
-- 新建本书专属索引 `wiki/sources/data-structures/大话数据结构/index.md`，并按原书第 1–9 章建立九份独立复习页。
+- 新建本书专属索引 `wiki/30-sources/books/大话数据结构/index.md`，并按原书第 1–9 章建立九份独立复习页。
 - 各章记录定义、关键流程、复杂度/前提、易错点、前后关系、PDF 物理页定位及仅作 TODO 的通用知识候选主题。
-- 更新 `wiki/index.md`，仅增加本书专属索引入口；未创建或修改 `wiki/concepts/`、`wiki/overview/`、`wiki/comparisons/` 等通用知识页。
+- 更新 `wiki/index.md`，仅增加本书专属索引入口；未创建或修改 `wiki/concepts/`、`wiki/overview/`、`wiki/40-maps/比较/` 等通用知识页。
 
 ---
+## [2026-07-19] design | 建立按稳定归属分目录的架构骨架、领域/项目入口与迁移说明
+
+## [2026-07-19] migrate | 完成 107 个页面迁移并删除 concepts、sources、entities、comparisons、overview 空目录；全库 Wikilink 已更新为当前路径
+
+## [2026-07-19] update | 为领域页与项目页补充当前 `30-sources` 来源摘要引用，并修正 `sources` frontmatter 的迁移路径
+
+## [2026-07-19] update | 将根目录 AGENTS.md 与 CLAUDE.md 统一改写为中文的当前目录、来源引用与维护规范
+
+## [2026-07-19] ingest | Java 大模型应用开发课程大纲与个人转型学习地图
+
+- 新建 `30-sources/courses/来源_Java大模型应用开发课程大纲.md`：如实记录用户提供的课程目录截图可辨识范围与证据边界。
+- 新建 `40-maps/Java开发者转型大模型应用开发学习地图.md`：面向五年 Java 开发经验，给出课程 P0/P1/P2 取舍、12 周交付节奏、三阶段作品集、评测/安全/观测验收标准。
+- 更新 `10-domains/ai/_index.md`，增加该学习地图入口。

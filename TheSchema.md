@@ -1,12 +1,17 @@
----
+﻿---
 created: 2026-04-27T21:00:00
-updated: 2026-04-27T21:49:00
+updated: 2026-07-19T00:00:00
 type: guide
 tags:
   - schema
   - wiki
   - knowledge-management
 ---
+
+> [!important] 2026-07-19 当前架构
+> 类型优先目录的迁移已经完成，旧目录已移除。当前目录、命名、元数据和工作流以
+> [[wiki/90-system/architecture/知识库架构骨架]] 为准：目录表达稳定归属，
+> `type` frontmatter 表达知识形态。本文后续旧路径示例仅作历史背景，不能作为新建页面的规则。
 
 ## 0. 目标与边界
 
@@ -39,10 +44,10 @@ tags:
 | `wiki/sources/`     | 单个来源的摘要页     |
 | `wiki/entities/`    | 人物、书籍、项目等实体页 |
 | `wiki/concepts/`    | 方法、理论、模型等概念页 |
-| `wiki/comparisons/` | 比较分析页        |
+| `wiki/40-maps/比较/` | 比较分析页        |
 | `wiki/overview/`    | 总览、综合页       |
 
-> **领域子目录**：上述目录可按 <area>/<sub-area> 多层组织，例如 `wiki/concepts/java/jvm/`、`wiki/concepts/java/concurrency/`、`wiki/concepts/redis/`。每种领域目录遵循相同的页面类型规范。所有索引条目也对应使用子目录路径。
+> **领域子目录**：上述目录可按 <area>/<sub-area> 多层组织，例如 `wiki/10-domains/java/jvm/`、`wiki/concepts/java/concurrency/`、`wiki/concepts/redis/`。每种领域目录遵循相同的页面类型规范。所有索引条目也对应使用子目录路径。
 
 ### 根目录文件
 - `wiki/index.md`：内容索引（可选，用 Obsidian 视图替代也行）
@@ -78,7 +83,7 @@ updated: "YYYY-MM-DD HH:mm:ss"
 - 来源信息（标题、作者、时间、链接）
 - 核心要点（3–7 条 bullet）
 - 关键引文（可选）
-- 关联实体/概念链接（`[[entities/xxx]]` / `[[concepts/yyy]]`）
+- 关联领域或项目页面（例如 `[[10-domains/<领域>/<主题>]]`）
 
 ### 2.2 Entity Page（实体页）
 
@@ -100,7 +105,7 @@ updated: "YYYY-MM-DD HH:mm:ss"
 
 ### 2.4 Comparison Page（比较页）
 
-路径：`wiki/comparisons/xxx_vs_yyy.md`
+路径：`wiki/40-maps/比较/xxx_vs_yyy.md`
 
 - 比较对象简介
 - 相同点
@@ -144,10 +149,10 @@ updated: "YYYY-MM-DD HH:mm:ss"
 1. 通过 `wiki/index.md`、frontmatter 的 `summary` 找到候选页面
 2. 读取页面内容，综合回答
 3. 如回答有价值（比较 / 分析 / 计划），可建议：
-   - 写回为新 wiki 页面（`wiki/comparisons/` 或 `wiki/overview/`）
+   - 写回为新 wiki 页面（`wiki/40-maps/比较/` 或 `wiki/overview/`）
    - 在 `wiki/log.md` 记录：
      ```
-     ## [2026-04-08] query | 新建 wiki/comparisons/xxx_vs_yyy.md
+     ## [2026-04-08] query | 新建 wiki/40-maps/比较/xxx_vs_yyy.md
      ```
 
 ### 3.3 Lint（健康检查）
@@ -234,7 +239,7 @@ wiki 是主知识源
 ### 4.5 命名规范
 
 中文 + 下划线 ,稳定可读（如 `概念_费曼学习法`），同时包含领域路径（如 `concepts/java/概念_费曼学习法.md`）
-比较页：`xxx_vs_yyy`（如 `comparisons/java/Serial_vs_ParNew.md`）
+比较页：`xxx_vs_yyy`（如 `40-maps/比较/java/Serial_vs_ParNew.md`）
 
 ---
 

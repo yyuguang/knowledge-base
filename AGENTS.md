@@ -1,516 +1,127 @@
-# AGENTS.md
+# 知识库维护规范
 
-This repository is an Obsidian knowledge base maintained in the style of an LLM Wiki. Agents working here should treat `raw/` as source material and `wiki/` as the compiled, reusable knowledge layer.
+本仓库是基于 Obsidian 的长期知识库。`raw/` 是只读来源层，`wiki/` 是经过整理、可链接、可查询和可持续演化的知识层。
 
-The primary job is not to answer once, but to turn useful material into durable Markdown knowledge that can be queried, linked, updated, and evolved over time.
+## 核心原则
 
-## Repository Map
+- 不只回答一次；将可复用的理解写入 `wiki/`。
+- 目录表达页面的稳定归属与生命周期；`type` frontmatter 表达知识形态。
+- 不再使用按 `concepts`、`sources`、`entities`、`comparisons`、`overview` 分类的旧目录；这些目录已删除。
+- `raw/` 始终只读。除非用户明确授权，不修改 `wiki/` 以外的文件。
+- 不删除页面、不做大规模重构，除非用户明确要求。
+- 不伪造来源、引用、运行结果或置信度；不确定时清楚标注。
 
-```text
-.
-├── prompt/          # Custom prompt templates
-├── raw/             # Original source materials, read-only
-│   ├── papers/
-│   ├── books/
-│   └── media/
-├── wiki/            # Compiled knowledge layer maintained by agents
-│   ├── sources/     # Source summary pages
-│   ├── concepts/    # Concepts, methods, models, theories
-│   ├── entities/    # People, books, projects, tools, organizations
-│   ├── comparisons/ # Comparison and decision pages
-│   ├── overview/    # Cross-source synthesis and topic overviews
-│   ├── insights/    # Higher-level reusable insights
-│   ├── index.md     # Wiki index
-│   └── log.md       # Operation log
-├── Attachments/     # Obsidian attachments
-├── README.md        # Repository overview
-├── TheSchema.md     # Wiki schema and workflow guide
-└── CLAUDE.md        # Prior agent instructions
-```
-
-## Hard Boundaries
-
-- `raw/` is read-only. Never modify source materials.
-- By default, create or modify only files under `wiki/`.
-- Do not delete wiki pages unless the user explicitly asks.
-- Do not perform broad restructuring without user confirmation.
-- Prefer incremental improvement over destructive rewriting.
-- Do not fabricate sources, citations, or confidence.
-- Root-level configuration files such as `AGENTS.md`, `CLAUDE.md`, `TheSchema.md`, and `README.md` may be edited only when the user explicitly asks.
-
-## Core Model
-
-`raw/` is the source layer. `wiki/` is the compiled knowledge layer.
-
-When ingesting or updating knowledge, do more than summarize. Extract:
-
-- Concepts and definitions
-- Entities and relationships
-- Examples and trade-offs
-- Reusable frameworks
-- Comparisons and decision criteria
-- Open questions and uncertainty
-
-A good wiki page should still be useful one month later without rereading the original raw material.
-
-## Operating Modes
-
-Choose the mode from the user's request.
-
-### Query Mode
-
-Use when the user asks a question, explanation, comparison, decision suggestion, or summary based on the existing wiki.
-
-Workflow:
-
-1. Search `wiki/index.md` first.
-2. Search relevant frontmatter summaries.
-3. Search the relevant area subdirectory.
-4. Load only the minimum required pages.
-5. Answer based on the wiki.
-6. If coverage is insufficient, say so clearly.
-7. If the answer creates reusable knowledge, propose or perform a wiki write-back depending on the user's intent.
-
-Output:
-
-- Keep concise but useful, usually 5-10 key points.
-- Mention source or concept pages used.
-- Do not dump full pages unless requested.
-- State knowledge gaps plainly.
-
-### Ingest Mode
-
-Use when the user provides raw notes, an article, transcript, PDF text, copied documentation, long-form material, or a file under `raw/`.
-
-Workflow:
-
-1. Identify the domain area.
-2. Check whether related pages already exist.
-3. Create or update one source summary page.
-4. Create or update up to 3 important concept/entity pages.
-5. Optionally create or update one overview/comparison page if the material connects multiple ideas.
-6. Update `wiki/index.md`.
-7. Append a record to `wiki/log.md`.
-
-Default output:
-
-- 1 source page
-- 0-3 concept/entity pages
-- 0-1 overview/comparison page
-- index update
-- log update
-
-Do not create many shallow pages at once. If more pages are needed, add a TODO section or propose the next batch.
-
-### Update Mode
-
-Use when the user asks to improve, extend, refactor, merge, or update an existing wiki page.
-
-Workflow:
-
-1. Locate the target page.
-2. Load only that page and 1-2 similar pages for duplication checks.
-3. Decide whether to append, restructure, merge, or create a related page.
-4. Apply the smallest useful change.
-5. Update backlinks when necessary.
-6. Update `wiki/index.md` if the summary or page list changes.
-7. Append to `wiki/log.md`.
-
-### Synthesis Mode
-
-Use when the user asks for deeper understanding across multiple notes or sources.
-
-Workflow:
-
-1. Load relevant source, concept, comparison, and overview pages.
-2. Identify repeated patterns.
-3. Identify conflicts or unresolved questions.
-4. Produce or update an overview page when useful.
-5. Link supporting pages.
-6. Record the change in `wiki/log.md`.
-
-Synthesis is not a short summary. It should include current understanding, conceptual framework, recurring patterns, uncertainty, open questions, and next actions.
-
-### Lint Mode
-
-Use only when the user explicitly asks for lint, health check, audit, review, or diagnosis.
-
-Check:
-
-- Missing or incomplete frontmatter
-- Weak definitions
-- Duplicate or overlapping pages
-- Isolated pages and missing links
-- Shallow pages
-- Outdated information
-- Missing overview pages
-
-Return up to 10 issues grouped by type. Do not modify files unless the user confirms.
-
-## Wiki Structure
-
-Use domain subdirectories under each page type:
+## 当前目录
 
 ```text
 wiki/
-  index.md
-  log.md
-  sources/<area>/来源_<title>.md
-  concepts/<area>/概念_<name>.md
-  entities/<area>/实体_<name>.md
-  comparisons/<area>/<A>_vs_<B>.md
-  overview/<area>/主题_<name>_综述.md
-  insights/<area>/洞察_<name>.md
+  00-inbox/       # 尚未确定稳定归属的输入
+  10-domains/     # 长期、可复用的领域知识
+  20-projects/    # 有目标、上下文和结束条件的项目工作
+  30-sources/     # 图书、论文、仓库、课程等来源摘要
+  40-maps/        # 跨领域导航、比较、学习路径和问题地图
+  90-system/      # 架构、模板、工作流、查询和维护脚本
+  _meta/          # 迁移、登记和维护说明
+  index.md        # 全库入口
+  log.md          # 变更日志
 ```
 
-Examples:
+详细定义以 [[90-system/architecture/知识库架构骨架]] 为准。
 
-```text
-wiki/concepts/java/jvm/概念_JVM内存区域.md
-wiki/concepts/java/concurrency/概念_AQS.md
-wiki/sources/ai/来源_Karpathy_LLM_Wiki.md
-wiki/overview/ai/主题_LLM知识库设计_综述.md
-wiki/comparisons/java/gc/Serial_vs_ParNew.md
-```
+### 归档判断
+
+1. 尚未确定归属 → `00-inbox/`
+2. 一份资料本身说了什么 → `30-sources/<媒介>/`
+3. 服务于明确项目 → `20-projects/<项目>/`
+4. 可脱离项目长期复用 → `10-domains/<领域>/`
+5. 用于导航、比较、路线或跨来源综合 → `40-maps/`
+6. 用于知识库自身能力 → `90-system/`
+
+活跃领域和项目均应维护 `_index.md`。目录不确定时先写入 `00-inbox/`，不要为了新笔记类型新增顶层目录。
 
 ## Frontmatter
 
-Every wiki page should use frontmatter.
+新页面使用以下字段；保留已有页面的其他有意义字段。
 
 ```yaml
 ---
-type: "source|concept|entity|comparison|overview|insight"
-tags: []
-summary: ""
+type: concept                  # source | concept | entity | comparison | overview | insight | decision | experiment | map
+area: java/jvm
+scope: durable                 # inbox | durable | project | source | map | system
+project: []
+summary: "一句话说明页面解决的问题"
 sources: []
 aliases: []
-status: "draft|evolving|stable"
+tags: []
+status: draft                  # draft | evolving | stable | archived
 confidence: 0.0
 created: "YYYY-MM-DD HH:mm:ss"
 updated: "YYYY-MM-DD HH:mm:ss"
 ---
 ```
 
-Use `status: draft` and lower `confidence` when uncertain. Do not hide uncertainty.
+### 来源规则
 
-## Page Templates
+- 来源摘要页放在 `30-sources/`，其 `sources` 记录原始文件路径、仓库地址或外部链接。
+- 领域页、项目页、地图页的 `sources` 必须优先链接对应来源摘要页，例如：
+  `"[[30-sources/repositories/来源_Spring_Framework_源码]]"`。
+- 若需要保留细粒度证据，可在来源摘要链接之后附加 `raw/` 文件路径或外部链接。
+- 不使用已删除目录的路径，也不用 `wiki/30-sources/...` 作为来源字段；统一使用 `[[30-sources/...]]`。
 
-### Source Page
+## 页面与链接
 
-Path: `wiki/sources/<area>/来源_<title>.md`
+- 文件名使用稳定、清晰的中文主题名；不再强制以“概念_”“实体_”“综述_”区分类型。
+- 项目决策命名为 `ADR_YYYYMMDD_主题.md`；实验记录命名为 `实验_主题.md`。
+- 使用完整路径 Wikilink，如 `[[10-domains/java/jvm/概念_JVM内存区域]]`。
+- 链接必须说明关系，避免无上下文的裸链接。
+- 每个普通知识页尽量连接至少两个相关页面；来源页可例外。
+- 新建前先查找同领域、别名和摘要，优先更新已有页面，避免语义重复。
 
-Recommended sections:
+## 工作模式
 
-- `# 来源：<title>`
-- `## 一句话总结`
-- `## 来源信息`
-- `## 核心观点`
-- `## 关键论证`
-- `## 重要概念`
-- `## 可复用表达`
-- `## 我的理解`
-- `## 未解决问题`
-- `## 相关链接`
+### 查询
 
-### Concept Page
+1. 先看 `wiki/index.md`、领域或项目 `_index.md`。
+2. 再按 frontmatter `summary` 和相关目录定位最少页面。
+3. 基于现有知识回答；覆盖不足时明确说明缺口。
+4. 若结论可复用，按用户意图写回或提出写回建议。
 
-Path: `wiki/concepts/<area>/概念_<name>.md`
+### 导入
 
-Recommended sections:
+适用于 `raw/` 文件、文章、转录、文档或用户提供的长材料。
 
-- `# 概念：<name>`
-- `## 定义`
-- `## 为什么重要`
-- `## 使用场景`
-- `## 核心机制`
-- `## 例子`
-- `## 常见误区`
-- `## 和其它概念的关系`
-- `## 我的理解`
-- `## 来源`
+1. 识别领域或项目，检查是否已有相近页面。
+2. 在 `30-sources/` 创建或更新一份来源摘要。
+3. 在 `10-domains/` 或 `20-projects/` 创建或更新 0–3 个高价值页面。
+4. 必要时更新一个 `40-maps/` 页面或领域 / 项目 `_index.md`。
+5. 让知识页的 `sources` 链接到新来源摘要。
+6. 更新 `wiki/index.md`（仅全库入口变化时）和 `wiki/log.md`。
 
-### Entity Page
+### 更新与综合
 
-Path: `wiki/entities/<area>/实体_<name>.md`
+- 先读取目标页和 1–2 个近似页面，确认不存在重复。
+- 使用最小必要改动；更新来源、相关链接和对应 `_index.md`。
+- 多来源综合应说明当前结论、框架、冲突、不确定性和待验证问题。
 
-Recommended sections:
+### 健康检查
 
-- `# 实体：<name>`
-- `## 基本信息`
-- `## 关键特征`
-- `## 相关事件 / 行为 / 作品`
-- `## 和其它实体或概念的关系`
-- `## 我的理解`
-- `## 来源`
+仅在用户明确要求 lint、审计、诊断或评审时执行。检查来源缺失、失效链接、重复、孤立页、浅层页面和过期内容；默认只报告，不直接修改。
 
-### Comparison Page
+## 索引与日志
 
-Path: `wiki/comparisons/<area>/<A>_vs_<B>.md`
+- `wiki/index.md` 只作为全库入口，不枚举每一页。
+- 领域和项目导航优先由各自 `_index.md` 承担。
+- 每次创建、更新、迁移、合并或删除 Wiki 页面，都在 `wiki/log.md` 追加：
 
-Recommended sections:
+  ```markdown
+  ## [YYYY-MM-DD] action | description
+  ```
 
-- `# <A> vs <B>`
-- `## 一句话结论`
-- `## 比较对象`
-- `## 相同点`
-- `## 不同点`
-- `## 选择建议`
-- `## 相关链接`
+## 完成前检查
 
-### Overview Page
-
-Path: `wiki/overview/<area>/主题_<name>_综述.md`
-
-Recommended sections:
-
-- `# 主题：<name> 综述`
-- `## 当前结论`
-- `## 总体框架`
-- `## 核心概念`
-- `## 关键来源`
-- `## 重要关系`
-- `## 当前判断`
-- `## 未解决问题`
-- `## 下一步`
-
-### Insight Page
-
-Path: `wiki/insights/<area>/洞察_<name>.md`
-
-Create insight pages sparingly. Only create one when at least 2 sources support the same pattern and the insight can guide future understanding or action.
-
-Recommended sections:
-
-- `# 洞察：<name>`
-- `## 洞察`
-- `## 支撑依据`
-- `## 推理过程`
-- `## 适用边界`
-- `## 后续验证`
-
-## Linking Rules
-
-Use Obsidian wikilinks with paths and context.
-
-Good:
-
-```markdown
-[[concepts/java/jvm/概念_JVM内存区域]] — 堆的分代结构是理解分代 GC 的前提
-```
-
-Avoid naked links:
-
-```markdown
-[[概念_JVM内存区域]]
-```
-
-Rules:
-
-- Use area paths in links.
-- Prefer stable concept links over temporary source links.
-- Each non-source page should have at least 2 internal links when possible.
-- Each section should have at most 3 highly relevant links.
-- Avoid over-linking.
-- Avoid orphan pages.
-- Every link should explain why it exists.
-
-## Naming Rules
-
-Use Chinese, readable, stable filenames.
-
-- Source: `来源_<资料标题>.md`
-- Concept: `概念_<概念名>.md`
-- Entity: `实体_<实体名>.md`
-- Overview: `主题_<主题名>_综述.md`
-- Insight: `洞察_<洞察名>.md`
-- Comparison: `<A>_vs_<B>.md`
-
-Use the most specific useful domain area:
-
-- Java JVM: `java/jvm`
-- Java concurrency: `java/concurrency`
-- Spring AI: `java/spring-ai`
-- LangChain4j: `java/langchain4j`
-- Redis: `redis`
-- Message queue: `mq`
-- AI Agent: `ai/agent`
-- Prompt Engineering: `ai/prompt`
-- Knowledge management: `knowledge-management`
-
-If unsure, choose a broader area and mark uncertainty.
-
-## Anti-Duplication Rules
-
-Before creating a new page:
-
-1. Search within the same area subdirectory.
-2. Search aliases and summaries.
-3. Search the type root if the area is uncertain.
-4. If a similar page exists, update it instead of creating a new one.
-5. If two pages overlap heavily, propose a merge.
-6. Do not create semantic duplicates.
-
-Prefer updating existing pages. When uncertain, create a TODO proposal instead of many new pages.
-
-## Context Loading Rules
-
-Use the smallest context that can complete the task correctly.
-
-Search order:
-
-1. `wiki/index.md`
-2. Frontmatter `summary`
-3. Relevant area subdirectory
-4. Type root directory
-5. `raw/` only when needed
-
-Default context budget:
-
-- Up to 3 directly relevant wiki pages
-- Up to 1 source page
-- Up to 1 overview page
-
-Do not scan the whole wiki unless the user explicitly requests it.
-
-Use `raw/` only when:
-
-- Ingesting a specified raw file
-- Wiki coverage is missing
-- Verification against the original source is required
-- The user explicitly asks to inspect raw material
-
-Otherwise, prefer `wiki/`.
-
-## Index Rules
-
-Maintain `wiki/index.md`.
-
-When creating or significantly updating a page:
-
-- Add it if missing.
-- Update the summary if stale.
-- Keep entries organized by area.
-- Keep index entries short but useful.
-
-Example:
-
-```markdown
-## Java / JVM
-
-- [[concepts/java/jvm/概念_JVM内存区域]] — JVM 运行时内存结构，是理解 GC、对象分配和性能调优的基础
-- [[concepts/java/jvm/概念_类加载机制]] — 描述 class 文件如何被加载、验证、准备、解析和初始化
-```
-
-## Log Rules
-
-Record all wiki changes in `wiki/log.md`.
-
-Format:
-
-```markdown
-## [YYYY-MM-DD] action | description
-```
-
-Examples:
-
-```markdown
-## [2026-04-08] ingest | raw/karpathy-llm-wiki.md → wiki/sources/ai/来源_Karpathy_LLM_Wiki.md
-## [2026-04-08] update | wiki/concepts/ai/agent/概念_LLM_Wiki.md（补充编译型知识库定义）
-## [2026-04-08] create | wiki/overview/ai/主题_LLM知识库设计_综述.md
-## [2026-04-08] merge | 概念_A + 概念_B → 概念_A
-```
-
-Use the current local date.
-
-## Quality Gate
-
-Before finishing any Ingest, Update, or Synthesis task, check:
-
-1. Would this note still be useful one month later?
-2. Can future questions be answered from this page without rereading raw material?
-3. Does the page explain relationships, not just list facts?
-4. Are important concepts defined, not merely named?
-5. Are links meaningful and contextual?
-6. Is the page placed in the right domain area?
-7. Is the page connected to at least two relevant internal pages when possible?
-8. Is uncertainty clearly marked?
-
-If the answer is no, improve the page before finishing.
-
-## Style
-
-- Write wiki content primarily in Chinese unless the source terminology is better preserved in English.
-- Use clear Markdown headings and short sections.
-- Prefer stable structure over decorative formatting.
-- Use tags sparingly. Prefer directory structure for domain classification.
-- Good tags: `java`, `jvm`, `gc`, `ai-agent`, `knowledge-management`.
-- Avoid vague tags such as `important`, `todo`, `note`, `misc`.
-- Do not create huge unstructured pages.
-- Do not create many tiny shallow pages.
-
-## Completion Reports
-
-After making changes, return a concise report.
-
-For Query:
-
-```text
-回答：
-- ...
-
-写回：
-- 已更新：wiki/concepts/...
-- 原因：这个解释可复用
-```
-
-For Ingest:
-
-```text
-完成：
-- 新建：wiki/sources/...
-- 新建/更新：wiki/concepts/...
-- 更新：wiki/index.md
-- 更新：wiki/log.md
-
-后续建议：
-- ...
-```
-
-For Update:
-
-```text
-完成：
-- 更新：wiki/concepts/...
-- 变更点：
-  - ...
-```
-
-For Lint:
-
-```text
-发现问题：
-1. ...
-2. ...
-
-建议：
-- ...
-```
-
-Keep chat reports short. The useful long-form content should live in wiki files, not only in the conversation.
-
-## Forbidden Behavior
-
-Do not:
-
-- Modify `raw/`.
-- Touch files outside `wiki/` unless explicitly asked.
-- Create duplicate pages.
-- Create many shallow pages.
-- Leave important concepts only as names.
-- Generate pages without checking existing pages.
-- Use naked wikilinks.
-- Rewrite unrelated pages.
-- Fabricate sources.
-- Hide uncertainty.
-- Create overview pages from one weak source unless explicitly marked as draft.
-- Perform broad restructuring without user confirmation.
+1. 页面是否一个月后仍有用？
+2. 是否解释了关系，而不是只罗列事实？
+3. `scope` 是否与目录一致？
+4. 是否避免了重复，并建立了有意义的链接？
+5. 来源摘要链接是否有效，原始证据是否没有被伪造？
+6. 不确定性是否通过 `status`、`confidence` 或正文明确说明？
